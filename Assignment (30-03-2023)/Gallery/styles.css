@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#files{
+    border: none;
+    font-size: 20px;
+    padding: 20px;
+}
+.wrapper{
+    padding-left: 40px;
+    padding-right: 50px;
+    width: 100vw;
+   height: auto;
+    padding-top: 50px;
+    background-color: rgb(135, 135, 159);
+}
+#result{
+    display: flex;
+    gap:30px;
+    flex-wrap: wrap;
+    
+    padding: 20px 0;
+
+}
+.output{
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+    padding-bottom: 30px;
+}
+.output:hover{
+    box-shadow: 4px 4px 4px rgb(13, 13, 13);
+}
+.thumbnail{
+   border-radius: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    width: 400px;
+    height: 300px;
+
+}
+.like{
+   
+    margin-right: 10px;
+    color: white;
+    font-size: 20px;
+}
+.like:hover{
+    color: red;
+}
+button{
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 5px;
+    background-color: rgb(64, 64, 232);
+    margin-right: 10px;
+}
+input{
+    margin-right: 10px;
+}
+.like_count{
+    color: red;
+    font-weight: bold;
+}
+.comment_button{
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+.comments{
+    margin-top: 10px;
+    color: black;
+    font-weight :bold;
+    font-size: 14px;
+
+}

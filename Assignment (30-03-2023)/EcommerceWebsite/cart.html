@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fca614d14e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div id="wrapper">
+
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg bg-light sticky-top px-4">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="images/logo.svg" width="50px">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="mens.html">MEN'S</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="ladies.html">WOMEN'S</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="bags.html">BAG'S</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="global_bags.html">TRAVEL BAG'S</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#"><button type="button" class="btn btn-outline-info border-2">Login</button></a>
+                   </li>
+                   <li class="nav-item ms-3">
+                    <a href="#"><button type="button" class="btn btn-success border-2">Sign Up</button></a>
+                   </li>
+                   <li class="nav-item ms-3">
+                    <a class="nav-link active bg-info rounded-5 px-3" href="cart.html" ><i class="fa-solid fa-cart-shopping"></i><span id="cart_text">CART</span><span id="cartLen" style="margin-left: 4px; color: red;"></span></a>
+                   </li> 
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+        </nav>
+
+        
+        <!--Footer  -->
+      
+        <!-- Cart Items -->
+        <div class="products-container">
+          <div class="product-header">
+            <h5 class="product-title">PRODUCT</h5>
+            <h5 class="price" style="margin-left: 5px;">PRICE</h5>
+            <h5 class="quantity" style="margin-left: 0px;">QUANTITY</h5>
+            <h5 class="total">TOTAL</h5>
+          </div>
+          <div class="products">
+
+            
+
+          </div>
+
+        </div>
+
+        <footer>
+            <div class="foot">
+                <div class="foot_box">
+                    <h5>SHOP</h5>
+                    <a href="#arrivals"><p>New</p></a>
+                    <a href="#"><p>Packs & Bags</p></a>
+                    <a href="#"><p>Men's Apparel</p></a>
+                    <a href="#"><p>Women's Apparel</p></a>
+                    <a href="#"><p>Gift Cards</p></a>
+                    <a href="#"><p>Sign Up</p></a>
+
+                </div>
+                <div class="foot_box">
+                    <h5>ABOUT US</h5>
+                    <a href="#arrivals"><p>Contact Us</p></a>
+                    <a href="#"><p>Address</p></a>
+                    <a href="#"><p>Carres</p></a>
+                    <a href="#"><p>Customer Care</p></a>
+                    <a href="#"><p>Feedback</p></a>
+                    <a href="#"><p>Rewards</p></a>
+                </div>
+                <div class="foot_box">
+                    <div class="social_media">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

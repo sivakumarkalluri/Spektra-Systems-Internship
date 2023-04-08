@@ -1,0 +1,381 @@
+/* font-family: 'Oswald', sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+:root{
+    --deepOrange: #E31B23;
+    --deepBlack: #000000;
+}
+.text{
+    font-family: 'Oswald', sans-serif;
+}
+.nav-link{
+    font-size: 1rem;
+    letter-spacing:2px;
+    font-family: 'Oswald', sans-serif;
+}
+
+#hero_section{
+    position: relative;
+    max-height: 520px; 
+    max-width: 1300px;
+   
+}
+#hero_img{
+    
+    height: 500px;
+}
+#hero_right{
+    
+    bottom: 10%;
+    right: 5%;
+    position: absolute;
+}
+.hero_text1{
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    color: white;
+}
+.hero_text2{
+    
+    color: white;
+}
+.shop_now>span{
+    color: white;
+    
+}
+.shop_now{
+    padding-bottom: 12px;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+   background-color: var(--deepOrange);
+}
+.shop_now:hover{
+    background-color: #ca0d13;
+}
+
+#new_arrivals{
+   
+    margin-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.cart{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E31B23;
+    color: white;
+    text-decoration: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    border-radius: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+}
+.buy_now{
+    margin-top: 10px;
+    width: 100%;
+}
+.cart:hover{
+    background-color: #ca0d13;
+    box-shadow: 3px 3px 3px gray;
+}
+.arrival:hover{
+    background-color: rgb(164, 160, 160);
+    box-shadow: 3px 3px 3px gray;
+}
+#wears{
+    margin-top: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.fashion_wear{
+    height: 400px;
+    display: flex;
+    gap: 20px;
+}
+.wears_left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-image: url(images/mens_ladies_wear.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.wears_right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-image: url(images/Global_Travel_bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.wears_left_text{
+    
+    color: white;
+   
+    font-family: 'Oswald', sans-serif;
+}
+.wears_right_text{
+    
+    color: white;
+   
+    font-family: 'Oswald', sans-serif;
+}
+#contents{
+    margin-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.wears{
+    display: flex;
+    
+    gap: 30px;
+    height: 250px;
+}
+.bagsPacks{
+    display: flex;
+    align-items: center;
+    width: 33%;
+    background-image: url(images/Bags_card_bg.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+.mensWear{
+    display: flex;
+    align-items: center;
+    width: 33%;
+    background-image: url(images/mens_bg.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+.womensWear{
+    display: flex;
+    align-items: center;
+    width: 33%;
+    background-image: url(images/ladies_bg.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+.contents_text{
+    color: white;
+    margin-left: 30px;
+}
+#SignUp{
+    height: 300px;
+    
+    margin-top: 50px;
+}
+.signUp_box{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: var(--deepOrange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.signup_left{
+    color: white;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+}
+.signup_right{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+.signup_right input{
+    width: 300px;
+    height: 30px;
+}
+#signUpBtn{
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #000000;
+
+}
+#signUpBtn:hover{
+    background-color: rgb(46, 43, 43);
+}
+
+footer{
+    transform: translateY(-18px);
+   
+    background-color: #000000;
+   
+}
+.foot{
+
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.foot_box a{
+    text-decoration: none;
+    color: white;
+}
+.foot_box{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    
+    color: white;
+}
+.social_media{
+    font-size: 30px;
+    color: white;
+    display: flex;
+    gap: 10px;
+}
+.social_media>a:hover{
+    color: var(--deepOrange);
+}
+#mens_hero_right{
+    
+    top: 50%;
+    left: 40%;
+    color: black;
+    position: absolute;
+}
+.displayImg{
+    height: 200px;
+}
+
+
+/* ***************************** */
+/************ Cart CSS ************/
+/* **************************** */
+
+.products-container{
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.products i{
+    font-size: 30px;
+    color: black;
+    
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+.products{
+  display: flex;
+  flex-direction: column;  
+}
+
+.product-header{
+   
+    width: 100%;
+    
+    max-width: 900px;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    font-family: 'Oswald', sans-serif;
+    justify-content: flex-start;
+    border-bottom: 4px solid var(--deepOrange);
+    margin: 0 auto;
+}
+.product-title{
+    
+    width: 50%;
+}
+.price{
+    /* border-bottom: 1px solid lightgray; */
+    
+    width: 20%;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+}
+.quantity{
+    width: 30%;
+    display: flex;
+    /* margin-right: 50px; */
+   /* margin-left: 40px; */
+    align-items: center;
+    /* border-bottom: 1px solid lightgray; */
+
+}
+.total{
+    width: 10%;
+    display: flex;
+    
+   
+    align-items: center;
+    /* border-bottom: 1px solid lightgray; */
+
+}
+.product{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    /* border-bottom: 1px solid lightgray; */
+
+}
+.cartTotalContainer{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 20px 0;
+}
+.cartTotalTitle{
+    /* display: flex; */
+    border-top: 1px solid lightgray;
+    width: 20%;
+}
+.purchase{
+    display: flex;
+    width: 20%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    justify-content: center;
+    background-color: #E31B23;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.Quantlist{
+    width: 30px;
+}

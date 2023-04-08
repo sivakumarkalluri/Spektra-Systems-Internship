@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Cards</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/fca614d14e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+    <div class="wrapper">
+
+        <!-- NavBar -->
+          <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="#">About</a>
+              <a href="#">Services</a>
+              <a href="#">Clients</a>
+              <a href="#">Contact</a>
+          </div>
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+
+          <!-- Cards -->
+          <div class="cards " style="padding-top: 50px;" >
+
+            <div class="row g-5 mx-auto">
+                <!-- Card 1 -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="d-flex flex-column align-items-center box">
+                            <h3 class="fs-2 mb-3">STARTER</h3>
+                            <img src="images/employee.png" width="35px" height="35px">
+                            <p class="mt-2">$ <span style="font-weight: bold; font-size: 25px;">0</span> /month</p>
+                            <ul class="list mt-4">
+                                <li><img src="images/check.png" style="width: 1rem;"><span class="list_text">Best Dynamic pages</span></li>
+                                <li><img src="images/check.png" style="width: 1rem;"><span class="list_text">100+ Component</span></li>
+                                <li><img src="images/check.png" style="width: 1rem;"><span class="list_text">Basic support on Github</span></li>
+                            </ul>
+                            <div class="d-grid col-10">
+                                <button class="btn btn-primary" type="button">Get started for free</button>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Card 2 -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="d-flex flex-column align-items-center box">
+                            <h3 class="fs-2 mb-3">PRO</h3>
+                            <img src="images/wallet.png" width="35px" height="35px">
+                            <p class="mt-2">$ <span style="font-weight: bold; font-size: 25px;">42</span> /month</p>
+                            <ul class="list mt-4">
+                                <li><img src="images/check.png" style="width: 1rem;"><span class="list_text">Upto 5 users</span></li>
+                                <li><img src="images/check.png" style="width: 1rem;"><span class="list_text">Unlimited storage</span></li>
+                                <li><img src="images/check.png" style="width: 1rem;"><span class="list_text">Premium Github Acess</span></li>
+                            </ul>
+                            <div class="d-grid col-10">
+                                <button class="btn btn-primary" type="button">Get started</button>
+                            </div>
+                        </div>
+
+                    </div>
+                <!-- Card 3 -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="d-flex flex-column align-items-center box">
+                            <h3 class="fs-2 mb-3">ENTERPRISE</h3>
+                            <img src="images/suitcase.png" width="35px" height="35px">
+                            <p class="mt-2">$ <span style="font-weight: bold; font-size: 25px;">84</span> /month</p>
+                            <ul class="list mt-4">
+                                <li><img src="images/check.png" style="width: 1rem;"><span class="list_text">Azure Storage Acess</span></li>
+                                <li><img src="images/check.png" style="width: 1rem;"><span class="list_text">500+ components</span></li>
+                                <li><img src="images/check.png" style="width: 1rem;"><span class="list_text">Doubts clearance Sessions</span></li>
+                            </ul>
+                            <div class="d-grid col-10">
+                                <button class="btn btn-primary" type="button">Get started </button>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+          </div>
+            
+
+
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+</body>
+</html>

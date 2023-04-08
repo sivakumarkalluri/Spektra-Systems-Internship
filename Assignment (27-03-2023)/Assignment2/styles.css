@@ -1,0 +1,88 @@
+
+#hero{
+    background-color: #0F6CBD;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("hero_image.jpg");
+    padding-top: 200px;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+#hero>p{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+.order{
+    background-color: #0F6CBD;
+    color: white;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding: 10px;
+    
+
+}
+#hero>h1{
+    color: white;
+     font-size:100px; 
+    font-weight: bold;
+}
+
+#menu{
+    margin-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+.main_head{
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+}
+
+#aboutUs{
+    margin-top: 50px;
+   
+}
+
+
+footer{
+    max-width: 1300px;
+    height: 250px;
+    color: aliceblue;
+    background-color: #243673;
+
+}
+.foot{
+   display: flex;
+   justify-content: space-between;
+   padding: 50px;
+}
+.foot_icons{
+    display: flex;
+    gap:20px;
+}
+
+@media screen and (max-width: 900px)  {
+   #hero>h1{
+    font-size: 70px;
+   }
+   #hero>p{
+    font-size: 16px;
+   }
+  }
+@media  (min-width:700px) {
+    #founder_img{
+        width: 50%;
+    }
+    
+}
