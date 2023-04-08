@@ -1,0 +1,49 @@
+.card_box{
+    border-radius: 10px;
+    display: flex;
+    height: 500px;
+    transition: all 0.3s ease-in-out;
+
+    flex-direction: column;
+   /* justify-content: center; */
+   align-items: center;
+   width: 400px;
+   background-color: white;
+   
+  margin: auto;
+
+}
+.profile{
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+}
+.review{
+     font-family: 'Montserrat', sans-serif;
+     text-align: left;
+font-size: 12px;
+    width: 300px;
+}
+.Name{
+    font-size: 30px;
+    font-weight: bolder;
+    text-shadow: 5px 5px 5px rgb(22, 71, 88);
+    font-family: 'Montserrat', sans-serif;
+
+}
+.tech{
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.logo{
+    width: 60px;
+    height: 70px;
+    margin-bottom: 0px;
+}
+.card_box:hover{
+    box-shadow: 10px 10px 10px gray;
+    transform: scale(0.98);
+    transition: all 0.3s ease-in-out;
+}

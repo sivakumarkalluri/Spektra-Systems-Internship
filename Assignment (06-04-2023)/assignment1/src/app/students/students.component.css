@@ -1,0 +1,18 @@
+.photo{
+    margin: auto;
+    width: 80px;
+    height: 80px;
+}
+.students_table{
+    margin-top: 30px;
+}
+td,th{
+    text-align: center;
+}
+input,select{
+    margin-bottom: 20px;
+}
+label{
+    color: white;
+    font-weight: bold;
+}

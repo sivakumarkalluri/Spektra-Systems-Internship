@@ -1,0 +1,18 @@
+<div>
+    <a routerLink="/persons"><button class="btn btn-outline-info" >Testimonials Table</button></a>
+    <h2 style="color: white;">Review</h2>
+   <div *ngFor="let person of personsList">
+        <div *ngIf="person.id == personDetails">
+            <div class="card_box">
+                <p class="Name">{{person.Name}}</p>
+                <img [src]="person.image" class="profile">
+            
+                <p class="tech">{{person.technology}}</p>
+                <p class="company"><img [src]="person.logo" class="logo"></p>
+                <p class="review">{{person.review}}</p>
+            </div>
+
+        </div>
+
+   </div>
+</div>

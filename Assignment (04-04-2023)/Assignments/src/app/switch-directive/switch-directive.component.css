@@ -1,0 +1,15 @@
+#country{
+    margin-top: 30px;
+    color: white;
+}
+.switch{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 100px;
+    margin-left: 500px;
+}

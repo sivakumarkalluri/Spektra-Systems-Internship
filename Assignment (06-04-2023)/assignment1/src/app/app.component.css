@@ -1,0 +1,9 @@
+.base_nav:hover{
+    background-color: darkblue;
+    color: white;
+    transform: scale(0.98);
+    transition: all 0.3s ease-in-out;
+}
+.base_nav{
+    transition: all 0.3s ease-in-out;
+}

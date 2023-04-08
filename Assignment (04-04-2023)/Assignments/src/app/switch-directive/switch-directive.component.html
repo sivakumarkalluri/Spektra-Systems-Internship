@@ -1,0 +1,18 @@
+<div class="switch">
+  <h2 class="text-white">Select Country</h2>
+  <select [(ngModel)]="country">
+    <option selected>Choose Country</option>
+    <option value="1">India</option>
+    <option value="2">England</option>
+    <option value="3">Japan</option>
+    <option value="4">China</option>
+  </select>
+
+  <div id="country" [ngSwitch]="country">
+    <p *ngSwitchCase="'1'">Selected Country is {{ array[0] }}</p>
+    <p *ngSwitchCase="'2'">Selected Country is {{ array[1] }}</p>
+    <p *ngSwitchCase="'3'">Selected Country is {{ array[2] }}</p>
+    <p *ngSwitchCase="'4'">Selected Country is {{ array[3] }}</p>
+    <p *ngSwitchDefault>Select Country</p>
+  </div>
+</div>

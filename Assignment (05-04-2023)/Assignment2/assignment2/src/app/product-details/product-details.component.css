@@ -1,0 +1,50 @@
+.product_box{
+    border: 1px solid lightgray;
+    padding: 20px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+
+    width: 500px;
+    height: 650px;
+    display: flex;
+    font-size: 13px;
+    justify-content: center;
+    margin: auto;
+    
+}
+.product_box:hover{
+    transform: scale(0.95);
+    transition: all 0.5s ease-in-out;
+    box-shadow: 5px 5px 5px gray;
+}
+
+
+.rating{
+    width: 80px;
+    height: 70px;
+}
+.ratingBox{
+    display: flex;
+    justify-content: flex-end;
+}
+.product_Name{
+    text-align: center;
+    font-weight: bold;
+}
+.product_image{
+   display: flex;
+   justify-content: center;
+
+}
+.deals{
+    font-size: 20px;
+    color: orangered;
+}
+.discount{
+    color: orangered;
+    font-size: 30px;
+}
+.price{
+    font-weight: bold;
+    font-size: 35px;
+}

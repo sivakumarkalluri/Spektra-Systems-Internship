@@ -1,0 +1,19 @@
+<div style="width: 400px; margin: auto; margin-top: 70px;">
+    <h2 style="font-weight: bold;">Cart Total</h2>
+    <table class="table table-dark table-striped" style="text-align: center;">
+        <thead >
+            <tr>
+                <th scope="col">Total Quantity</th>
+                <th scope="col">Total Price</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr>
+                <th scope="row">{{ totalQuantity }}</th>
+                <th scope="row">{{totalPrice | currency:'INR':'symbol-narrow':'2.2-2' }}</th>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="background-color: orangered; padding: 10px; width: 150px; text-align: center; margin: auto; color: white; font-weight: bold; border-radius: 3px;" class="pur_btn">Purchase Now</div>
+  </div>

@@ -1,0 +1,7 @@
+.pur_btn:hover{
+    background-color: rgb(141, 5, 5);
+    cursor: pointer;
+    transform: scale(0.98);
+    transition: all 0.4s ease-in-out;
+
+}

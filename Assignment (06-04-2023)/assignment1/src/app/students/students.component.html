@@ -1,0 +1,170 @@
+<!-- <div class="students_table">
+    <table class="table table-dark table-striped-columns align-center">
+        <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Photo</th>
+              <th scope="col">Name</th>
+              <th scope="col">Class</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Date of Birth</th>
+              <th scope="col">Average</th>
+              <th scope="col">Fees to be Paid</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let student of studentsDetails">
+              <th scope="row">{{student.id}}</th>
+              <td ><img src={{student.image}} class="photo"></td>
+              <td>{{student.Name}}</td>
+              <td>{{student.class}}</td>
+              <td>{{student.gender}}</td>
+              <td>{{student.DOB}}</td>
+              <td>{{student.Average}}</td>
+              <td>Rs. {{student.Fees}}</td>
+              
+            </tr>
+        
+      </table>
+      
+</div> -->
+
+<div style="width: 500px; margin-left: 40px;">
+    <h2 style="color: white; text-shadow: 3px 3px 3px gray; margin-top: 20px; font-weight: bold;">Please fill out the form !!..</h2>
+    <form  [formGroup]="userForm">
+        <div class="mt-5">
+            <div class="form-row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>ID</label>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" formControlName="Id" class="form-control" placeholder="ID" required>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Name</label>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" formControlName="Name" class="form-control" placeholder="Name" required>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Class</label>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" formControlName="class" class="form-control" placeholder="Class" required>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Gender</label>
+
+                    </div>
+                    <div class="form-row">
+                        <select class="form-select" formControlName="gender" aria-label="Default select example">
+                            <option selected>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                          </select>
+                    </div>
+
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="date" formControlName="Dob" class="form-control" placeholder="Date of Birth" required>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Fees</label>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="number" formControlName="fees" class="form-control" placeholder="Fees" required>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-row mt-4">
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-primary" (click)="addStudent()">Submit</button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </form>
+
+</div>
+
+
+<div class="students_table" style="width: 1000px; margin: auto; margin-top: 50px; margin-bottom: 50px;">
+    <h2 style="color: white; font-weight: bold; text-shadow: 2px 2px 2px gray;">Student Details</h2>
+    <table class="table table-success table-striped table-hover align-center">
+        <thead >
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Photo</th>
+              <th scope="col">Name</th>
+              <th scope="col">Class</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Date of Birth</th>
+              <th scope="col">Fees to be Paid</th>
+            </tr>
+          </thead>
+          <tbody style="text-align: center;" class="text-center" style="font-size: 16px;">
+            <tr *ngFor="let student of studentsData">
+              <th scope="row">{{student.Id}}</th>
+              <td>
+                <ng-container *ngIf="studentsDetails">
+                    <div *ngFor="let stu of studentsDetails">
+                    <ng-container *ngIf="stu.id == student.Id">
+                        <img src={{stu.image}} class="photo">
+                    </ng-container>
+                    </div>
+                </ng-container>
+              </td>
+              <td>{{student.Name}}</td>
+              <td>{{student.class}}</td>
+              <td>{{student.gender}}</td>
+              <td>{{student.Dob}}</td>
+              <td>Rs. {{student.fees}}</td>
+              
+            </tr>
+        
+      </table>
+      
+</div>
+
+<app-admin [studentsDetails]="studentsData" [TotalFees]="sum" [maleCount]="malesCount" [femaleCount]="femalesCount" [studentCount]="totalStudents"></app-admin>

@@ -1,0 +1,203 @@
+<div id="wrapper">
+       
+     
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-light sticky-top px-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="assets/logo.svg" width="50px">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">MEN'S</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">WOMEN'S</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">BAG'S</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">TRAVEL BAG'S</a>
+              </li>
+              <li class="nav-item">
+                <a href="#"><button type="button" class="btn btn-outline-info border-2">Login</button></a>
+               </li>
+               <li class="nav-item ms-3">
+                <a href="#"><button type="button" class="btn btn-success border-2">Sign Up</button></a>
+               </li>
+               <li class="nav-item ms-3">
+                <a class="nav-link active bg-info rounded-5 px-3" href="#" ><i class="fa-solid fa-cart-shopping"></i><span id="cart_text">CART</span><span id="cartLen" style="margin-left: 4px; color: red;"></span></a>
+               </li> 
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+  
+  
+  
+    <div>
+    <!-- Hero Section -->
+    <div id="hero_section" >
+        <img src="assets/hero_image.png" alt="hero" class="w-100" id="hero_img">
+        <div id="hero_right">
+            <h1 class="hero_text1 text ">FASHION FOR EVERYONE</h1>
+            <h3 class="hero_text2 text">LET'S SHOP WITH US NOW</h3>
+            <a href="#wears" class="shop_now "><button class="btn shop_now text"><span class=" text">Shop Now</span></button></a>
+        </div>
+  
+    </div>
+  
+    <!-- New Arrivals -->
+    <h1 style="margin-top: 50px; text-align: center;">NEW ARRIVALS</h1>
+    <div id="new_arrivals">
+        <div class="row arrivals" >
+
+            <div class="row g-3" >
+               
+                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col" id="arrival1" *ngFor="let product of productsList">
+                    
+                    <div class="card arrival" >
+                        <img [src]="product.image" class="card-img-top displayImg" alt="..." style="height: 195px;">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <h5 class="card-title" style="margin-top: 7px;">{{product.Name}}</h5>
+                        <p>{{product.price}}</p>
+                        <div class="cart add-cart cart-1" ><i class="fa-solid fa-cart-shopping"></i><span style="margin-left: 20px;" id="msg1">Add to Cart</span></div>    
+                        <button class="btn btn-primary buy_now" (click)="onSelect(product.id)">Buy Now</button>
+                        </div>
+                    </div>
+                </div> 
+            <div></div>
+      
+  
+      
+  
+        
+  
+  
+    </div>
+  
+    <!-- Wears -->
+    <div id="wears">
+        <div class="fashion_wear">
+            <div class="wears_left">
+                <div class="wears_left_text">
+                    <h2>MEN'S AND WOMEN'S FASHION WEAR</h2>
+                    <H5>WITH LATEST NEW COLLECTION</H5>
+                    <h6>DISCOUNT UPTO 20%</h6>
+                    <a href="#" class="shop_now "><button class="btn shop_now text"><span class=" text">Check Out Now</span></button></a>
+                </div>
+  
+            </div>
+            <div class="wears_right">
+                <div class="wears_right_text">
+                    <h2>GLOBAL TRAVEL KITS</h2>
+                    <h6>DISCOUNT UPTO 35%</h6>
+                    <a href="#" class="shop_now "><button class="btn shop_now text"><span class=" text">Check Out Now</span></button></a>
+                </div>
+  
+            </div>
+        </div>
+  
+    </div>
+  
+    <!-- Contents -->
+    <div id="contents">
+        <div class="wears">
+            <div class="bagsPacks">
+                <div class="contents_text">
+                    <h2>PACKS<BR>BAGS</h2>
+                    <a href="#" class="shop_now "><button class="btn shop_now text"><span class=" text">SHOP BAGS</span></button></a>
+  
+  
+                </div>
+  
+            </div>
+            <div class="mensWear">
+  
+                <div class="contents_text">
+                    <h2>MEN'S<BR>APPAREL</h2>
+                    <a href="#" class="shop_now "><button class="btn shop_now text"><span class=" text">SHOP MEN'S</span></button></a>
+  
+                </div>
+  
+            </div>
+            <div class="womensWear">
+                <div class="contents_text">
+                    <h2>WOMEN'S<BR>APPAREL</h2>
+                    <a href="#" class="shop_now "><button class="btn shop_now text"><span class=" text">SHOP WOMEN'S</span></button></a>
+  
+  
+                </div>
+  
+            </div>
+        </div>
+  
+    </div>
+  
+    <!-- Sign Up -->
+    <div id="SignUp">
+  
+        <div class="signUp_box">
+            <div class="signup_left">
+                <h1>SIGN UP & SAVE</h1>
+                <P>Sign up and stay up to date on all the latest news from Shopify Designs and best of all, you'll get 15% off!</P>
+            </div>
+            <div class="signup_right">
+                <input type="email" placeholder="Your Email">
+                <input type="tel" placeholder="Your Mobile Number">
+                <a href="#" id="signUpBtn">SIGN UP</a>
+            </div>
+        </div>
+  
+    </div>
+      </div>
+  
+    <!-- Footer -->
+  
+    <footer>
+        <div class="foot">
+            <div class="foot_box">
+                <h5>SHOP</h5>
+                <a href="#arrivals"><p>New</p></a>
+                <a href="#"><p>Packs & Bags</p></a>
+                <a href="#"><p>Men's Apparel</p></a>
+                <a href="#"><p>Women's Apparel</p></a>
+                <a href="#"><p>Gift Cards</p></a>
+                <a href="#"><p>Sign Up</p></a>
+  
+            </div>
+            <div class="foot_box">
+                <h5>ABOUT US</h5>
+                <a href="#arrivals"><p>Contact Us</p></a>
+                <a href="#"><p>Address</p></a>
+                <a href="#"><p>Carres</p></a>
+                <a href="#"><p>Customer Care</p></a>
+                <a href="#"><p>Feedback</p></a>
+                <a href="#"><p>Rewards</p></a>
+            </div>
+            <div class="foot_box">
+                <div class="social_media">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+  
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+  
+  </div>

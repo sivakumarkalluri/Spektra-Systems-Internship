@@ -1,0 +1,13 @@
+<div class="ms-5 mt-5" id="ngif">
+  <input type="radio" name="check" value="valid" [(ngModel)]="isValid" />
+  <label class="text-white m-2 me-5">Valid</label>
+  <input type="radio" name="check" value="notValid" [(ngModel)]="isValid" />
+  <label class="text-white m-2">Not valid</label>
+  <br />
+  <div *ngIf="isValid === 'valid'">
+    <p class="text-white">Data is Valid.......</p>
+  </div>
+  <div *ngIf="isValid === 'notValid'">
+    <p class="text-white">Data is Not Valid.......</p>
+  </div>
+</div>
