@@ -1,0 +1,23 @@
+
+<div class="wrapper">
+    <button (click)="getInfo()" class="btn btn-info">Employee Details</button>
+    <table *ngIf="visible ==true" class="table table-success table-striped">
+        <thead  class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of infoReceived">
+                <td>{{emp.id}}</td>
+                <td>{{emp.firstName}}</td>
+                <td>{{emp.country}}</td>
+                <td>{{emp.age}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
