@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+.main{
+    margin: 50px;
+}
+body{
+    background-image: url("assets/bg.jpg");
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
