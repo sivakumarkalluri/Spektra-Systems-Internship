@@ -1,0 +1,31 @@
+<div class="add_emp">
+
+    <nav class="nav nav-pills ">
+        <button class="btn new_btn btn-outline-primary" (click)="getHome()"><i
+                class="fa-solid fa-house"></i>Home</button>
+        <button class="new_btn btn btn-primary " (click)="openForm()"><i class="fa-solid fa-user-plus"></i>Add
+            Employee</button>
+    </nav>
+
+    <div class="form_table">
+        <form class="user-form" [formGroup]="companyForm" (ngSubmit)="saveCompany()">
+            <label class="form-label">Employee ID</label>
+            <input type="number" placeholder="ID" formControlName="id" class="form-control">
+            <label class="form-label">Name</label>
+            <input type="string" placeholder="Name" formControlName="name" class="form-control">
+            <label class="form-label">Technology</label>
+            <input type="string" placeholder="Technology" formControlName="technology" class="form-control">
+            <label class="form-label">Experience</label>
+            <input type="number" placeholder="Experience" formControlName="experience" class="form-control">
+            <label class="form-label">Address</label>
+            <textarea placeholder="Address" formControlName="address" class="form-control"></textarea>
+            <div>
+                <button class="btn btn-primary btn_save">Save</button><button class="btn btn-danger btn_save"
+                    (click)="getHome()">Close</button>
+            </div>
+
+
+        </form>
+    </div>
+
+</div>
