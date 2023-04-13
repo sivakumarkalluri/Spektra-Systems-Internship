@@ -45,7 +45,9 @@ export class AddUserComponent implements OnInit {
     this.router.navigate(['Home']);
   }
   openForm() {
-    this.router.navigate(['addUserLink'])
+    this.router.navigate(['/addUserLink']);
+
+    // window.open('/addUserLink', '_blank');
 
   }
 

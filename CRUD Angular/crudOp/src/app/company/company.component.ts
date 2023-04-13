@@ -48,7 +48,8 @@ export class CompanyComponent implements OnInit {
 
   // For Creating Data
   openForm() {
-    this.router.navigate(['addUserLink'])
+    this.router.navigate(['/addUserLink']);
+    // window.open('/addUserLink', '_blank');
 
   }
 

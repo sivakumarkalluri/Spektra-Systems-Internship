@@ -1,18 +1,11 @@
 {
   "company": [
     {
-      "name": "siva",
+      "name": "siva kumar",
       "technology": "python",
       "experience": 1,
       "address": "marathalli",
       "id": 1
-    },
-    {
-      "name": "kumar",
-      "technology": "c",
-      "experience": 2,
-      "address": "Andhra",
-      "id": 2
     }
   ]
 }

@@ -65,6 +65,15 @@ i{
     margin-right: 5px;
 }
 .new_btn{
+    box-shadow: 3px 3px 2px gray ;
+    transform: scale(0.95);
+    transition: all 0.3s ease-in-out;
     margin-left: 20px;
     margin-top: 30px;
+}
+.new_btn:hover{
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 5px 5px 5px gray;
+
 }
