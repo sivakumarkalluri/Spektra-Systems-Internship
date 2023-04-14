@@ -1,0 +1,10 @@
+{
+    "users":[
+        {"id":1,"userId":"siva101","userName":"Siva kumar","password":"kcaka9$2","jd":"Python Developer"},
+        {"id":2,"userId":"kumar220","userName":"Kumar","password":"ada22@222","jd":"Java Developer"},
+        {"id":3,"userId":"harsh301","userName":"Harsha Vardhan","password":"kcfh*2","jd":"UI Developer"},
+        {"id":4,"userId":"deepali104","userName":"Deepali","password":"fsfji*2","jd":"Backend Developer"},
+        {"id":5,"userId":"pankaj2020","userName":"Pankaj","password":"dfefij*9$2","jd":"FrontEnd Developer"},
+        {"id":6,"userId":"vijaya109","userName":"Vijaya","password":"kdjhfsdf2","jd":"Full Stack Developer"}
+    ]
+}

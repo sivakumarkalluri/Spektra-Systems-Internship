@@ -53,10 +53,6 @@ export class EditFormComponent {
   getHome() {
     this.router.navigate(['Home']);
   }
-  openForm() {
-    this.router.navigate(['addUserLink'])
-
-  }
 
 
 

@@ -6,9 +6,8 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { CompanyComponent } from './company/company.component';
 
 const routes: Routes = [
-  {path:'',component:CompanyComponent},
+  {path:'', redirectTo:"Home",pathMatch:'full'},
   {path:'Home',component:CompanyComponent},
-  {path:'HomeLink',component:AppComponent},
   {path:'addUserLink',component:AddUserComponent},
   {path:'editForm',component:EditFormComponent}
 ];

@@ -1,12 +1,5 @@
 <div class="add_emp">
 
-    <nav class="nav nav-pills ">
-        <button class="btn new_btn btn-outline-primary" (click)="getHome()"><i
-                class="fa-solid fa-house"></i>Home</button>
-        <button class="new_btn btn btn-primary " (click)="openForm()" ><i class="fa-solid fa-user-plus"></i>Add
-            Employee</button>
-    </nav>
-
     <div class="form_table">
         <form class="user-form" [formGroup]="companyForm" (ngSubmit)="saveCompany()">
             <label class="form-label">Employee ID</label>

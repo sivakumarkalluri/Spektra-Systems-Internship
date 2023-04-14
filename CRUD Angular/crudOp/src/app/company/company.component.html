@@ -1,43 +1,48 @@
 <div class="home">
-    <nav class="nav nav-pills ">
-        <button class="nav-link active new_btn btn" (click)="getHome()"><i class="fa-solid fa-house"></i>Home</button>
-        <button class="new_btn btn btn-outline-primary " (click)="openForm()"><i class="fa-solid fa-user-plus"></i>Add Employee</button>
-    </nav>
 
+  <h1>EMPLOYEE DETAILS</h1>
 
+  <div class="companyTable">
+    <table class="table table-hover">
+      <thead class="table table-dark">
+        <tr>
+          <th>Employee Id</th>
+          <th>Name</th>
+          <th>Technology</th>
+          <th>Experience</th>
+          <th>Address</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of companyDetails">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.technology }}</td>
+          <td>{{ employee.experience }}</td>
+          <td>{{ employee.address }}</td>
 
-    <h1>EMPLOYEE DETAILS</h1>
-    <div class="companyTable">
-    
-        <table class="table table-hover">
-            <thead class="table table-dark ">
-                <tr>
-                    <th>Employee Id</th>
-                    <th>Name</th>
-                    <th>Technology</th>
-                    <th>Experience</th>
-                    <th>Address</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let employee of companyDetails">
-                    <td>{{employee.id}}</td>
-                    <td>{{employee.name}}</td>
-                    <td>{{employee.technology}}</td>
-                    <td>{{employee.experience}}</td>
-                    <td>{{employee.address}}</td>
-                
-                    <td>
-                        <button class="btn btn-success btn_action" (click)="editEmployee(employee)"><i class="fa-solid fa-pen-to-square"></i>Edit</button>
-                        <button class="btn btn-danger btn_action" (click)="deleteRow(employee.id)"><i class="fa-solid fa-trash"></i>Delete</button>
-                    </td>
-                
+          <td>
+            <button
+              class="btn btn-success btn_action"
+              (click)="editEmployee(employee)"
+            >
+              <i class="fa-solid fa-pen-to-square"></i>Edit
+            </button>
+            <button
+              class="btn btn-danger btn_action"
+              (click)="deleteRow(employee.id)"
+            >
+              <i class="fa-solid fa-trash"></i>Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-
-                </tr>
-
-            </tbody>
-        </table>
-    </div>
+  <div *ngIf="deleted == true">
+    <div class="deleted">Deleted Successfully...</div>
+  </div>
+  
 </div>

@@ -35,3 +35,15 @@ h1{
     font-family: 'Montserrat', sans-serif;
     
 }
+
+.deleted{
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px 10px 20px;
+    width: 400px;
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}

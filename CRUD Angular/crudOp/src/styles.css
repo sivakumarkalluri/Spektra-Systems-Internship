@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-.new_btn{
-    margin-right: 20px;
-    margin-left: 10px;
+body{
+    overflow-x: hidden;
 }
 .home{
     width: 100vw;
@@ -32,10 +31,6 @@ label{
     color: white;
     font-weight: bold;
 }
-.new_btn{
-    margin-left: 20px;
-    margin-top: 30px;
-}
 
 .user-form{
     background-color: rgba(0,0,0,0.3);
@@ -64,16 +59,13 @@ input{
 i{
     margin-right: 5px;
 }
-.new_btn{
-    box-shadow: 3px 3px 2px gray ;
+.btn_action{
     transform: scale(0.95);
+    box-shadow: 3px 3px 2px gray;
     transition: all 0.3s ease-in-out;
-    margin-left: 20px;
-    margin-top: 30px;
 }
-.new_btn:hover{
+.btn_action:hover{
     transform: scale(1);
     transition: all 0.3s ease-in-out;
-    box-shadow: 5px 5px 5px gray;
-
+    box-shadow: 5px 5px 0.3px gray;
 }

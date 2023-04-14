@@ -1,11 +1,12 @@
 <div class="edit_emp">
-    <nav class="nav nav-pills ">
-        <button class="new_btn btn btn-outline-primary " (click)="getHome()"><i class="fa-solid fa-house"></i>Home</button>
-        <button class="new_btn btn btn-outline-success " (click)="openForm()"><i class="fa-solid fa-user-plus"></i>Add Employee</button>
-        <button class="new_btn btn btn-primary" ><i class="fa-solid fa-user-pen"></i>Edit</button>
-    </nav>
 
-    <div style="margin-top: 20px;">
+        <div class="edit">
+            <button class="btn btn-primary" >
+                <i class="fa-solid fa-user-pen"></i>Edit
+            </button>
+        </div>
+    
+    
 
     <form class="user-form" [formGroup]="companyForm" (ngSubmit)="editSaveEmployee()">
         <label class="form-label">Employee ID</label>
@@ -25,5 +26,4 @@
 
     </form>
 
-    </div>
 </div>

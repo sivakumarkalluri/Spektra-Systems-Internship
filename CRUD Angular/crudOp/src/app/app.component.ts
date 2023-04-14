@@ -11,12 +11,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  getHome() {
-    this.router.navigate(['Home']);
-  }
-  openForm() {
-    this.router.navigate(['addUserLink'])
-
-  }
-  title = 'crudOp';
+  title="";
+ 
 }

@@ -29,6 +29,8 @@ export class CompanyComponent implements OnInit {
 
   }
 
+  deleted = false;
+
   // Deleting the Data
   deleteRow(id: any) {
     const idArray = [id];
@@ -39,21 +41,13 @@ export class CompanyComponent implements OnInit {
     this.companyData.getCompanyDetails().subscribe(data => {
       this.companyDetails = data;
     })
-  }
+    this.deleted = true
+    setTimeout(() => {
+      this.deleted = false
+    }, 2000);
 
-
-  getHome() {
-    this.router.navigate(['Home']);
-  }
-
-  // For Creating Data
-  openForm() {
-    this.router.navigate(['/addUserLink']);
-    // window.open('/addUserLink', '_blank');
 
   }
-
-
 
 
 
