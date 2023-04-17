@@ -1,0 +1,29 @@
+<div class="edit_emp">
+
+        <div class="edit">
+            <button class="btn btn-primary" >
+                <i class="fa-solid fa-user-pen"></i>Edit
+            </button>
+        </div>
+    
+    
+
+    <form class="user-form" [formGroup]="companyForm" (ngSubmit)="editSaveEmployee()">
+        <label class="form-label">Employee ID</label>
+        <input type="number" placeholder="ID" formControlName="id" class="form-control">
+        <label class="form-label">Name</label>
+        <input type="string" placeholder="Name" formControlName="name" class="form-control">
+        <label class="form-label">Technology</label>
+        <input type="string" placeholder="Technology" formControlName="technology" class="form-control">
+        <label class="form-label">Experience</label>
+        <input type="number" placeholder="Experience" formControlName="experience" class="form-control">
+        <label class="form-label">Address</label>
+        <textarea placeholder="Address" formControlName="address" class="form-control"></textarea>
+        <div>
+            <button class="btn btn-primary btn_save">Save</button><button class="btn btn-danger btn_save" (click)="getHome()">Close</button>
+        </div>
+
+
+    </form>
+
+</div>

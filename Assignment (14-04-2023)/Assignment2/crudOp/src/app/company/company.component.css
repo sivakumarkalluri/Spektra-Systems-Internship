@@ -1,0 +1,49 @@
+.table{
+    text-align: center;
+    width: 70%;
+   
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.7em 0.7em 0.7em rgba(0, 0, 0, 0.6);
+    
+    margin: auto;
+}
+
+tbody{
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(255,255,255, 0.4);
+    border: 1px solid gray;
+}
+.companyTable{
+    transform: scale(0.95);
+    transition: all 0.3s ease-in-out;
+    margin-top: 50px;
+    
+}
+.companyTable:hover{
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+.btn_action{
+    margin-right: 20px;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px white;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.deleted{
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px 10px 20px;
+    width: 400px;
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}

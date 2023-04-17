@@ -1,0 +1,32 @@
+{
+  "company": [
+    {
+      "name": "siva kumar",
+      "technology": "java",
+      "experience": 1,
+      "address": "balaji nagar",
+      "id": 1
+    },
+    {
+      "name": "Vijay",
+      "technology": "python",
+      "experience": 3,
+      "address": "marathalli",
+      "id": 2
+    },
+    {
+      "name": "Vinay",
+      "technology": "C Developer",
+      "experience": 2,
+      "address": "white field",
+      "id": 3
+    },
+    {
+      "name": "Ganesh",
+      "technology": "Angular",
+      "experience": 1,
+      "address": "Majestic",
+      "id": 4
+    }
+  ]
+}
