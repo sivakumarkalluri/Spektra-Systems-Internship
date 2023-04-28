@@ -1,0 +1,7 @@
+C:\Spektra Systems\Spektra-Systems-Internship\Assignment (27-04-2023)\Assignment1\bin\Debug\Assignment1.exe.config
+C:\Spektra Systems\Spektra-Systems-Internship\Assignment (27-04-2023)\Assignment1\bin\Debug\Assignment1.exe
+C:\Spektra Systems\Spektra-Systems-Internship\Assignment (27-04-2023)\Assignment1\bin\Debug\Assignment1.pdb
+C:\Spektra Systems\Spektra-Systems-Internship\Assignment (27-04-2023)\Assignment1\obj\Debug\Assignment1.csprojAssemblyReference.cache
+C:\Spektra Systems\Spektra-Systems-Internship\Assignment (27-04-2023)\Assignment1\obj\Debug\Assignment1.csproj.CoreCompileInputs.cache
+C:\Spektra Systems\Spektra-Systems-Internship\Assignment (27-04-2023)\Assignment1\obj\Debug\Assignment1.exe
+C:\Spektra Systems\Spektra-Systems-Internship\Assignment (27-04-2023)\Assignment1\obj\Debug\Assignment1.pdb
