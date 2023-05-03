@@ -1,0 +1,1 @@
+select name from Sales.Currency order by name;

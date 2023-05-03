@@ -1,0 +1,2 @@
+--select * from HumanResources.Employee where SickLeaveHours=(Select MAX(SickLeaveHours) from HumanResources.Employee) ;
+select * from HumanResources.Employee a join (Select MAX(SickLeaveHours) from HumanResources.Employee) b on a.SickLeaveHours=b.SickLeaveHours;

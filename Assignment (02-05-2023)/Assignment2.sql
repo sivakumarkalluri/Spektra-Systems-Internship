@@ -1,0 +1,1 @@
+select * from HumanResources.Employee where JobTitle=N'Tool designer'; 
