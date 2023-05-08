@@ -1,0 +1,1 @@
+select Name,ProductID,FinishedGoodsFlag from Production.Product where FinishedGoodsFlag=1;

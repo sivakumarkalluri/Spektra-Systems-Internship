@@ -1,0 +1,1 @@
+select SalesOrderID, DATENAME(month, OrderDate) as Month_Ordered,SalesPersonID,CustomerID,SubTotal,TotalDue,OrderDate from Sales.SalesOrderHeader WHERE OrderDate>='2012-01-01 00:00:00.000';

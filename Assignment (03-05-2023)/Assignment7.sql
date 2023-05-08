@@ -1,0 +1,1 @@
+select CONCAT(FirstName,' ',MiddleName,' ',LastName) as Full_Name from Person.Person;
