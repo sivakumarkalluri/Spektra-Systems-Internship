@@ -5,4 +5,4 @@ from Sales.SalesOrderHeader group by OrderDate ;
 
 --drop view customers_Data;
 
-select * from dbo.customers_Data order by OrderDate;
+select * from dbo.customers_Data ;

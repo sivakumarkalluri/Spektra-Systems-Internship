@@ -6,7 +6,7 @@ price money not null,
 productName varChar(20) unique,
 OrderDate DateTime not null,
 ShippingPlace varchar(20) not null,
-primary key(SalesID,ProductID),
+primary key(SalesID),
 check(Quantity>=1 and price>=1000)
 );
 
@@ -26,7 +26,7 @@ VALUES
 
 INSERT INTO Sales.Promotion (SalesID, ProductID, Quantity, price, productName, OrderDate, ShippingPlace)
 VALUES
-(10, 1010, 0, 1700.00, 'Product J', '2023-05-10 14:00:00', 'Place X');
+(11, 1010, 0, 1700.00, 'Product J', '2023-05-10 14:00:00', 'Place X');
 
 
   select * from Sales.Promotion;

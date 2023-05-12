@@ -20,7 +20,6 @@ Create Table Production.Sales(
 	Foreign Key(ProductID) references Production.Quantity(ProductID)
 );
 
-drop table Production.Sales;
 	
 Insert Into Production.Quantity values 
    (101,10,250.00,3000.00),(102,15,300.00,2000.00),
