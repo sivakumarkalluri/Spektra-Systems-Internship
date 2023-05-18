@@ -1,0 +1,13 @@
+{
+  "students": [
+    {
+      "name": "siva",
+      "age": 22,
+      "course": "ece",
+      "semester": 2,
+      "feesDue": 200,
+      "examsCompleted": 1,
+      "id": 1
+    }
+  ]
+}

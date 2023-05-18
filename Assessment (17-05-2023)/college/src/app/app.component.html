@@ -1,0 +1,71 @@
+  
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="assets/logo.jpg" width="50px" height="50px">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Courses Offered</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Placements</a>
+        </li>
+        <div *ngIf="adminCheck === 'admin'">
+          <button class="btn btn-primary" routerLink="/Display">
+            Students Data
+          </button>
+          
+        </div>
+        <div *ngIf="adminCheck === 'student'">
+          <button class="btn btn-primary" routerLink="/student">
+            View Students 
+          </button>
+          
+        </div>
+
+        
+      </ul>
+      
+      <div *ngIf="adminCheck != 'admin' && adminCheck != 'student'">
+        <button class="btn btn-primary" (click)="adminLogin()">
+          Admin Login
+        </button>
+        <button class="btn btn-primary" (click)="studentLogin()">
+          Student Login
+        </button>
+        
+      </div>
+      <div *ngIf="adminCheck === 'admin' || adminCheck === 'student'">
+        <button class="btn btn-info" (click)="logout()">Logout</button>
+      </div>
+      <div *ngIf="adminCheck === 'student'">
+        <button class="btn btn-primary" (click)="adminLogin()">
+          Admin Login
+        </button>
+        
+      </div>
+      <div *ngIf="adminCheck === 'admin'">
+        <button class="btn btn-primary" (click)="studentLogin()">
+          Student Login
+        </button>
+        
+      </div>
+      
+    
+    
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

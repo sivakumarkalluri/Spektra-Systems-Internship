@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+form{
+    margin: auto;
+    max-width: 500px;
+}
+label{
+    font-weight: bold;
+}
+body{
+    background-image: url(assets/bg4.jpg);
+   
+    background-size: cover;
+}
+body{
+overflow-x: hidden;
+}

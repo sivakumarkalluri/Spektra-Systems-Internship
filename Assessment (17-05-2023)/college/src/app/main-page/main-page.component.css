@@ -1,0 +1,37 @@
+.bu{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+footer{
+    height: 200px;
+    margin-top: 50px;
+    background-color: rgb(43, 7, 91);
+    color: white;
+}
+.hero_sec{
+    display: flex;
+    position: relative;
+    
+}
+.header{
+    font-size: 100px;
+    font-weight: bold;
+    top: 50px;
+    left: 50px;
+    position: absolute;
+}
+.hero{
+    margin-bottom: 70px;
+}
+#right_hero{
+    width: 500px;
+    height: 500px;
+}
+.courses{
+    margin-left: 150px;
+    margin-right: 100px;
+    gap: 20px;
+    display: flex;
+}

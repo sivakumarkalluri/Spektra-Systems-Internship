@@ -1,0 +1,65 @@
+<button routerLink="/add">Add Student</button>
+<div>
+
+    <table class="table table-dark table-striped-columns">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+                <th>Semester</th>
+                <th>Fees Due</th>
+                
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let students of studentsDetails">
+                <td>{{students.id}}</td>
+                <td>{{students.name}}</td>
+                <td>{{students.age}}</td>
+                <td>{{students.course}}</td>
+                <td>{{students.semester}}</td>
+                <td>{{students.feesDue | currency}}</td>
+               
+            </tr>
+        </tbody>
+    </table>
+
+    <form >
+        <label>Enter Id to Search</label>
+        <input type="number" placeholder="Enter ID" [(ngModel)]="ID" name="id">
+        <button (click)="findID()">Search</button>
+    </form>
+    <div *ngIf="findData">
+    <table class="table table-dark table-striped-columns">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+                <th>Semester</th>
+                <th>Fees Due</th>
+                
+               
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr >
+                <td>{{findData.id}}</td>
+                <td>{{findData.name}}</td>
+                <td>{{findData.age}}</td>
+                <td>{{findData.course}}</td>
+                <td>{{findData.semester}}</td>
+                <td>{{findData.feesDue | currency}}</td>
+              
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+<router-outlet></router-outlet>
