@@ -4,10 +4,28 @@
       "name": "siva",
       "age": 22,
       "course": "ece",
-      "semester": 2,
+      "semester": 3,
       "feesDue": 200,
       "examsCompleted": 1,
       "id": 1
+    },
+    {
+      "name": "kumar",
+      "age": 22,
+      "course": "ece",
+      "semester": 8,
+      "feesDue": 10000,
+      "examsCompleted": 2,
+      "id": 2
+    },
+    {
+      "name": "vijay",
+      "age": 25,
+      "course": "Mech",
+      "semester": 1,
+      "feesDue": 5000,
+      "examsCompleted": 1,
+      "id": 3
     }
   ]
 }

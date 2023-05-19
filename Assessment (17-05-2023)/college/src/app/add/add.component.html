@@ -1,20 +1,21 @@
-<div>
-    <form [formGroup]="studentsForm" (ngSubmit)="saveForm()">
-        <label class="form-label">ID</label>
+<div class="addPage">
+    <form [formGroup]="studentsForm" (ngSubmit)="saveForm()" class="user-form">
+        <label class="form-label" style="color: white;">ID</label>
         <input type="number" formControlName="id" class="form-control" placeholder="ID">
-        <label class="form-label">Name</label>
+        <label class="form-label" style="color: white;">Name</label>
         <input type="text" formControlName="name" class="form-control" placeholder="Enter the Student Name">
-        <label class="form-label">Age</label>
+        <label class="form-label" style="color: white;">Age</label>
         <input type="number" formControlName="age" class="form-control" placeholder="Enter the Age">
-        <label class="form-label">Course</label>
+        <label class="form-label" style="color: white;">Course</label>
         <input type="text" formControlName="course" class="form-control" placeholder="Enter the Course">
-        <label class="form-label">Semester</label>
+        <label class="form-label" style="color: white;">Semester</label>
         <input type="number" formControlName="semester" class="form-control" placeholder="Enter the Semester">
-        <label class="form-label">Fees Due</label>
+        <label class="form-label" style="color: white;">Fees Due</label>
         <input type="number" formControlName="feesDue" class="form-control" placeholder="Enter the Fees to be Paid">
-        <label class="form-label">Exams Completed</label>
+        <label class="form-label" style="color: white;">Exams Completed</label>
         <input type="number" formControlName="examsCompleted" class="form-control" placeholder="Enter the Exams to be completed">
-        <button class="save btn btn-success">Save</button>
+        <button class="save btn btn-success" style="margin-top: 20px;">Save</button>
+        <button class="save btn btn-danger" style="margin-top: 20px; margin-left: 10px;" (click)="getHome()">Close</button>
 
     </form>
 </div>

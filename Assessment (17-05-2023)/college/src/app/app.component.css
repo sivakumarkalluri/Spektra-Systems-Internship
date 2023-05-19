@@ -1,0 +1,32 @@
+.nav-link:hover{
+    background-color: #E42428;
+    color: white;
+    border-radius: 5px;
+}
+.nav-item{
+    margin-right: 15px;
+}
+.fa-house{
+    margin-right: 5px;
+}
+.navbar{
+background-color: rgb(255, 255, 255);
+}
+.icon{
+    margin-right: 10px;
+}
+.admin{
+    background-color: #444791;
+
+    margin-right: 15px;
+}
+.admin:hover{
+    background-color: #20213f;
+}
+.view{
+    border: none;
+    background-color: #E42428;
+}
+.view:hover{
+    background-color: #8a181a;
+}

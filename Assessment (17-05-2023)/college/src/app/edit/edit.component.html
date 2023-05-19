@@ -1,5 +1,5 @@
-<div>
-    <form [formGroup]="studentsForm" (ngSubmit)="saveForm()">
+<div class="editPage">
+    <form [formGroup]="studentsForm" (ngSubmit)="saveForm()" class="user-form">
         <label class="form-label">ID</label>
         <input type="number" formControlName="id" class="form-control" placeholder="ID">
         <label class="form-label">Name</label>
@@ -14,7 +14,8 @@
         <input type="number" formControlName="feesDue" class="form-control" placeholder="Enter the Fees to be Paid">
         <label class="form-label">Exams Completed</label>
         <input type="number" formControlName="examsCompleted" class="form-control" placeholder="Enter the Exams to be completed">
-        <button class="save btn btn-success">Save</button>
+        <button class="save btn btn-success" style="margin-top: 10px;">Save</button>
+        <button class="save btn btn-danger" style="margin-top: 10px; margin-left: 10px;" (click)="getHome()">Close</button>
 
     </form>
 </div>

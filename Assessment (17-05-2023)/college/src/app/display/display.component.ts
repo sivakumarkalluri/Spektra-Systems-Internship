@@ -38,12 +38,21 @@ export class DisplayComponent implements OnInit{
   }
 
   ID:any;
+  errorMessage:any;
   findData:any;
-  findID():void{
+  findID(): void {
     console.log(this.ID);
-    this.apiService.getDataByID(this.ID).subscribe((data:any)=>{
-      this.findData=data;
-    })
+    this.apiService.getDataByID(this.ID).subscribe(
+      (data: any) => {
+        this.findData = data;
+        this.errorMessage = null;
+      },
+      (error: any) => {
+        console.error(error);
+        this.errorMessage = 'ID not found in the database.';
+        this.findData = null;
+      }
+    );
   }
   
 

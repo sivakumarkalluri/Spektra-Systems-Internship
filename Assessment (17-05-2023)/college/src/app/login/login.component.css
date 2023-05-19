@@ -1,10 +1,63 @@
-.login_form{
-    height: 300px;
-    background-color: rgba(0, 0, 139, 0.5);
-    padding: 20px;
-    
-    
-}
-.log{
-    margin-top: 30px;
-}
+.login-page {
+    background-image: url("../../assets/bg4.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .login-form {
+    background-color: rgba(0, 0, 139, 0.4);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .form-label {
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-wrapper input {
+    padding-left: 2.5rem;
+  }
+  
+  .input-wrapper i {
+    position: absolute;
+    left: 1rem;
+    color: #777;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+  }
+  
+  .text-danger {
+    color: #dc3545;
+  }
+  

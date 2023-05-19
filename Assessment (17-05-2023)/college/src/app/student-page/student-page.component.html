@@ -1,7 +1,7 @@
-<button routerLink="/add">Add Student</button>
-<div>
 
-    <table class="table table-dark table-striped-columns">
+<div class="stuPageBody">
+    <h1 style="text-align: center; font-size: 40px; font-weight: bold; color: ghostwhite;">Student Data</h1>
+    <table class="table table-dark table-striped-columns st_table">
         <thead>
             <tr>
                 <th>ID</th>
@@ -27,39 +27,55 @@
         </tbody>
     </table>
 
-    <form >
-        <label>Enter Id to Search</label>
-        <input type="number" placeholder="Enter ID" [(ngModel)]="ID" name="id">
-        <button (click)="findID()">Search</button>
-    </form>
-    <div *ngIf="findData">
-    <table class="table table-dark table-striped-columns">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Course</th>
-                <th>Semester</th>
-                <th>Fees Due</th>
-                
-               
-            </tr>
-        </thead>
+    <div class="findData">
+        <form class="row g-3 findLabel">
+            <div class="col-auto">
+            <label for="staticEmail2" style="font-size: 18px; ">Enter ID to Search</label>
+            </div>
+            <div class="col-auto">
+            <input type="number" class="form-control" [(ngModel)]="ID" name="id" placeholder="Enter ID">
+            </div>
+            <div class="col-auto">
+                <button (click)="findID()" class="btn btn-primary mb-3"> <i class="fa-solid fa-magnifying-glass"></i>Search</button>
+            </div>
+        </form>
+        <div *ngIf="errorMessage" class="error-message">
+            <p>{{ errorMessage }}</p>
+          </div>
+        <div *ngIf="findData">
+            <table class="table table-dark table-striped-columns find_table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Course</th>
+                        <th>Semester</th>
+                        <th>Fees Due</th>
+                        <th>Exam Completed</th>
+                    
+                    </tr>
+                </thead>
 
-        <tbody>
-            <tr >
-                <td>{{findData.id}}</td>
-                <td>{{findData.name}}</td>
-                <td>{{findData.age}}</td>
-                <td>{{findData.course}}</td>
-                <td>{{findData.semester}}</td>
-                <td>{{findData.feesDue | currency}}</td>
-              
-                
-            </tr>
-        </tbody>
-    </table>
-</div>
+                <tbody>
+                    <tr >
+                        <td>{{findData.id}}</td>
+                        <td>{{findData.name}}</td>
+                        <td>{{findData.age}}</td>
+                        <td>{{findData.course}}</td>
+                        <td>{{findData.semester}}</td>
+                        <td>{{findData.feesDue | currency}}</td>
+                        <td>{{findData.examsCompleted}}</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <ng-template #noData>
+        <div *ngIf="errorApi">
+        <h3>No Data found with ID {{ID}}</h3>
+        </div>
+    </ng-template>
 </div>
 <router-outlet></router-outlet>

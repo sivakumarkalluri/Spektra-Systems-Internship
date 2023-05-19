@@ -1,0 +1,8 @@
+.editPage{
+    background-image: url("../../assets/bg1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    margin-top: 50px;
+}

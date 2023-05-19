@@ -18,13 +18,30 @@ export class StudentPageComponent implements OnInit{
   }
   ID:any;
   findData:any;
-  findID():void{
+  idNotFound=false;
+  errorApi=false;
+  errorMessage:any;
+   findID(): void {
     console.log(this.ID);
-    this.apiService.getDataByID(this.ID).subscribe((data:any)=>{
-      this.findData=data;
-    })
+    this.apiService.getDataByID(this.ID).subscribe(
+      (data: any) => {
+        this.findData = data;
+        this.errorMessage = null;
+      },
+      (error: any) => {
+        console.error(error);
+        this.errorMessage = 'ID not found in the database.';
+        this.findData = null;
+      }
+    );
   }
+  
+  }
+  
+  
+    
+  
 
   
 
-}
+
