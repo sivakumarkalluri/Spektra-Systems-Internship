@@ -7,8 +7,7 @@ import { cartI } from 'src/app/interfaces/cartI';
 })
 export class UserService {
   constructor(private http:HttpClient) { }
-  ngOnInit(): void {
-  }
+  
 
   loginCheck=false;
   cartQuantity=0;
