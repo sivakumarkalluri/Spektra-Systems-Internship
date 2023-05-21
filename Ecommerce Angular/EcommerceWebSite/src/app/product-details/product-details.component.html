@@ -1,0 +1,22 @@
+  
+
+<div>
+    
+    <div class="product_box">
+        <div class="productsCard">
+                    <div class="product_image">
+                <img src="{{productData.image}}" width="200px" height="200px" >
+            </div>
+                <p class="product_Name">{{productData.name}}</p>
+                <p class="desc">{{productData.description}}</p>
+                <!-- <div class="ratingBox">
+                    <span style="font-size: 13px;"><img [src]="'assets/rating.png'" class="rating"> 4</span>
+                </div> -->
+                <p class="deals">Deals of the Day</p>
+                <p><span class="discount">{{productData.discount * 100}}%</span><span class="price">{{productData.price}}</span></p>
+                <p>EMI from ₹172. No Cost EMI available. EMI options Inclusive of all taxes</p>
+                <div class="cart add-cart cart-1 product_cart" ><i class="fa-solid fa-cart-shopping"></i><span style="margin-left: 20px;" id="msg1">Add to Cart</span></div>    
+                <button class="btn btn-primary buy_now product_buy">Buy Now</button>
+        </div>
+    
+</div>

@@ -1,0 +1,33 @@
+<div class="login-page">
+    <h1>Login</h1>
+    <form class="login-form">
+      <label class="form-label">User Name</label>
+      <div class="input-wrapper">
+        <input
+          type="text"
+          placeholder="Enter UserName"
+          [(ngModel)]="userName"
+          name="userName"
+          class="form-control"
+        />
+        <i class="fas fa-user"></i> <!-- Font Awesome user icon -->
+      </div>
+      <label class="form-label">Password</label>
+      <div class="input-wrapper">
+        <input
+          type="password"
+          placeholder="Enter Password"
+          [(ngModel)]="password"
+          name="password"
+          class="form-control"
+        />
+        <i class="fas fa-lock"></i> <!-- Font Awesome lock icon -->
+      </div>
+      <button (click)="loginBtn()" class="btn btn-success log"><i class="fa-sharp fa-solid fa-right-to-bracket" style="margin-right: 10px;"></i>Login</button>
+      <div *ngIf="wrongUserDetails">
+        <h6 class="text-danger">Wrong UserName or Password!</h6>
+      </div>
+    </form>
+  </div>
+  <router-outlet></router-outlet>
+  

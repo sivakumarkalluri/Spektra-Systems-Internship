@@ -1,0 +1,100 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Men's T-Shirt",
+      "price": 19.99,
+      "discount": 0.2,
+      "description": "Comfortable and stylish men's t-shirt in various colors.",
+      "image": "assets/products/product1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Women's Dress",
+      "price": 39.99,
+      "discount": 0.1,
+      "description": "Elegant and fashionable dress for women suitable for any occasion.",
+      "image": "assets/products/product2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Men's Jeans",
+      "price": 49.99,
+      "discount": 0.15,
+      "description": "Classic men's jeans with a modern fit and durable material.",
+      "image": "assets/products/product3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Unisex Sneakers",
+      "price": 59.99,
+      "discount": 0.25,
+      "description": "Versatile and comfortable sneakers suitable for both men and women.",
+      "image": "assets/products/product4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Men's Polo Shirt",
+      "price": 34.99,
+      "discount": 0.2,
+      "description": "Classic and casual men's polo shirt for a stylish look.",
+      "image": "assets/products/product5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Men's Shorts",
+      "price": 19.99,
+      "discount": 0.15,
+      "description": "Comfortable and lightweight men's shorts for casual wear.",
+      "image": "assets/products/product6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Women's Sweater",
+      "price": 44.99,
+      "discount": 0.2,
+      "description": "Warm and cozy sweater for women to stay fashionable in colder weather.",
+      "image": "assets/products/product7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Men's Jacket",
+      "price": 79.99,
+      "discount": 0.1,
+      "description": "Durable and stylish jacket for men to stay warm and fashionable.",
+      "image": "assets/products/product9.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Unisex Hat",
+      "price": 14.99,
+      "discount": 0.05,
+      "description": "Stylish and versatile hat suitable for both men and women.",
+      "image": "assets/products/product8.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Rover Bag",
+      "price": 24.99,
+      "discount": 0.15,
+      "description": "Rover Pack Anti Theft Backpack with 15.6 inch Laptop Compartment, Patented Design.",
+      "image": "assets/products/product10.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Unisex Hoodie",
+      "price": 49.99,
+      "discount": 0.2,
+      "description": "Cozy and warm hoodie suitable for both men and women.",
+      "image": "assets/products/product11.jpg"
+    },
+    {
+      "name": "Men's Formal Shirt",
+      "price": 42,
+      "discount": 0.1,
+      "description": "Elegant and sophisticated formal shirt for men for special occasions.",
+      "image": "assets/products/product12.jpg",
+      "id": 12
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+
+     
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg bg-light sticky-top px-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/logo.svg" width="50px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">MEN'S</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">WOMEN'S</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">BAG'S</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">TRAVEL BAG'S</a>
+            </li>
+            <li class="nav-item" *ngIf="adminCheck != 'admin' && adminCheck != 'user'">
+              <a routerLink="login"><button type="button" class="btn btn-outline-info border-2">Login</button></a>
+             </li>
+
+             <li class="nav-item" >
+              <a routerLink="/products"><button type="button" class="btn btn-success">All Products</button></a>
+             </li>
+
+            
+             
+             <li class="nav-item ms-3" *ngIf="adminCheck === 'user'">
+              <button class="nav-link active bg-info rounded-5 px-3" routerLink="/cartPage" ><i class="fa-solid fa-cart-shopping"></i><span id="cart_text">CART</span><span id="cartLen" style="margin-left: 4px; color: red;">{{cartTotal}}</span></button>
+             </li> 
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          <div *ngIf="adminCheck === 'admin'">
+            <button class="btn btn-primary view" routerLink="/crudPage" style="margin-left: 20px;">
+              Products Data
+            </button>
+          </div>
+
+          <li class="nav-item" *ngIf="adminCheck == 'admin' || adminCheck == 'user'" style="list-style-type: none; margin-left: 20px;">
+            <button type="button" class="btn btn-outline-danger border-2" (click)="logout()">Logout</button>
+           </li>
+          
+        </div>
+      </div>
+  </nav>
+  <router-outlet></router-outlet>
+  <footer>
+    <div class="foot">
+        <div class="foot_box">
+            <h5>SHOP</h5>
+            <a href="#arrivals"><p>New</p></a>
+            <a href="#"><p>Packs & Bags</p></a>
+            <a href="#"><p>Men's Apparel</p></a>
+            <a href="#"><p>Women's Apparel</p></a>
+            <a href="#"><p>Gift Cards</p></a>
+            <a href="#"><p>Sign Up</p></a>
+
+        </div>
+        <div class="foot_box">
+            <h5>ABOUT US</h5>
+            <a href="#arrivals"><p>Contact Us</p></a>
+            <a href="#"><p>Address</p></a>
+            <a href="#"><p>Carres</p></a>
+            <a href="#"><p>Customer Care</p></a>
+            <a href="#"><p>Feedback</p></a>
+            <a href="#"><p>Rewards</p></a>
+        </div>
+        <div class="foot_box">
+            <div class="social_media">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+
+            </div>
+        </div>
+    </div>
+</footer>
