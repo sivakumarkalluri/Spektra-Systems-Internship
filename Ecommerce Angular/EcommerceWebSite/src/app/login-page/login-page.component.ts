@@ -25,13 +25,15 @@ export class LoginPageComponent implements OnInit{
     
   if(this.userName=="admin" && this.password=="pass"){
     localStorage.setItem('role','admin');
-    this.goToHome();
     this.loginServe.loginCheck=true;
+    this.goToHome();
+    
   }
   else if(this.userName=="student" && this.password=="pass"){
     localStorage.setItem('role','user');
-    this.goToHome();
     this.loginServe.loginCheck=true;
+    this.goToHome();
+    
   }
   else{
     this.wrongUserDetails=true;

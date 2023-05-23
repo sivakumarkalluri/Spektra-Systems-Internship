@@ -17,7 +17,9 @@ const routes: Routes = [
   {path:"login",component:LoginPageComponent},
   
   {path:"cartPage",component:CartPageComponent},
+  {path:"adminPage",component:AdminPageComponent},
   {path:"admin",component:AdminPageComponent},
+ 
   {path:"products",component:ProductsPageComponent},
   {path:"productDetails/:id",component:ProductDetailsComponent},
   {path:"crudPage",component:CrudPageComponent},

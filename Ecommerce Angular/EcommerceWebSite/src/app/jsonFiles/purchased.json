@@ -1,5 +1,33 @@
 {
-    "purchased":[
-        
+  "purchased": [
+    [
+      {
+        "id": 1,
+        "name": "Men's T-Shirt",
+        "price": 19.99,
+        "quantity": 1,
+        "discount": 0.2,
+        "description": "Comfortable and stylish men's t-shirt in various colors.",
+        "image": "assets/products/product1.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Women's Dress",
+        "price": 39.99,
+        "quantity": 1,
+        "discount": 0.1,
+        "description": "Elegant and fashionable dress for women suitable for any occasion.",
+        "image": "assets/products/product2.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Men's Jeans",
+        "price": 49.99,
+        "quantity": 2,
+        "discount": 0.15,
+        "description": "Classic men's jeans with a modern fit and durable material.",
+        "image": "assets/products/product3.jpg"
+      }
     ]
+  ]
 }

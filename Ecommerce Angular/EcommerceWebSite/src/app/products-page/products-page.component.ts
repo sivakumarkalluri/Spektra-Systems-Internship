@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../services/admin/admin.service';
 import { Router } from '@angular/router';
 import { LoginService } from '../services/login/login.service';
+import { PurchasedService } from '../services/purchased/purchased.service';
 
 @Component({
   selector: 'app-products-page',
@@ -12,7 +13,7 @@ import { LoginService } from '../services/login/login.service';
 export class ProductsPageComponent implements OnInit{
   
   constructor(private AdminApiService:AdminService,private route:Router,
-    private loginServe:LoginService,private userApiService:UserService){}
+    private loginServe:LoginService,private userApiService:UserService,private purchaseServe:PurchasedService){}
  
   productDetails:any;
   isAddedToCart: boolean = false;
@@ -34,24 +35,32 @@ export class ProductsPageComponent implements OnInit{
   }
 
   addToCart(id:number){
-    const selectedProduct = this.productDetails.find((product: any) => product.id === id);
-    if (selectedProduct) {
-      const cartItem = {
-        id: selectedProduct.id,
-        name: selectedProduct.name,
-        price: selectedProduct.price,
-        quantity: 1,
-        discount: selectedProduct.discount,
-        description: selectedProduct.description,
-        image: selectedProduct.image
-      };
-      this.userApiService.addData(cartItem).subscribe((response: any) => {
-        console.log('Product added to cart:', response);selectedProduct.isAddedToCart = true;
-        setTimeout(() => {
-          selectedProduct.isAddedToCart = false;
-        }, 2000);
-      });
+    
+    if(localStorage.getItem('role') == 'user'){
+      const selectedProduct = this.productDetails.find((product: any) => product.id === id);
+      if (selectedProduct) {
+        const cartItem = {
+          id: selectedProduct.id,
+          name: selectedProduct.name,
+          price: selectedProduct.price,
+          quantity: 1,
+          discount: selectedProduct.discount,
+          description: selectedProduct.description,
+          image: selectedProduct.image
+        };
+        this.userApiService.addData(cartItem).subscribe((response: any) => {
+          console.log('Product added to cart:', response);selectedProduct.isAddedToCart = true;
+          setTimeout(() => {
+            selectedProduct.isAddedToCart = false;
+          }, 2000);
+        });
+        
+      }
     }
+    else{
+      this.route.navigate(['login']);
+    }
+  
   }
     
   }

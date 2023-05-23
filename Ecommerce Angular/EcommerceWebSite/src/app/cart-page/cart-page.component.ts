@@ -2,6 +2,7 @@ import { UserService } from './../services/user/user.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from '../services/cart.service';
+import { PurchasedService } from '../services/purchased/purchased.service';
 
 @Component({
   selector: 'app-cart-page',
@@ -10,7 +11,7 @@ import { CartService } from '../services/cart.service';
 })
 export class CartPageComponent implements OnInit{
 
-  constructor(private route:Router,private userApiService:UserService,private cartService:CartService){}
+  constructor(private route:Router,private userApiService:UserService,private cartService:CartService,private purchaseServe:PurchasedService){}
 
   cartData:any;
   ngOnInit(): void {
@@ -20,6 +21,7 @@ export class CartPageComponent implements OnInit{
         this.calculateTotal();
         this.userApiService.cartQuantity=this.totalQuantity;
       });
+      
       
   }
   
@@ -82,9 +84,40 @@ calculateTotal(): void {
   this.userApiService.cartQuantity = this.totalQuantity;
 
   this.totalPrice = this.cartData.reduce((total: number, product: any) => total + (product.quantity * product.price), 0);
+  this.cartService.cartSum=this.totalPrice;
   this.cartService.updateCartTotal(this.totalQuantity); // Call the service method to update the cart total
 
 }
+
+purchase(){
+  this.purchaseServe.addData(this.cartData).subscribe((response: any) => {
+    console.log('Purchase successful:', response);
+    // Make a DELETE request to remove cart data
+    this.deleteAllData()});
+    alert("purchased Successfully");
+  }
+  
+  deleteAllData(): void {
+    // Iterate over each item in the cartData array
+    for (const product of this.cartData) {
+      this.userApiService.deleteData(product.id).subscribe(
+        (response: any) => {
+          console.log('Deleted product with ID:', product.id);
+        },
+        (error: any) => {
+          console.error('Error deleting product with ID:', product.id, error);
+        }
+      );
+    }
+  
+    // Clear the cartData array
+    this.cartData = [];
+    // Recalculate the total
+    this.calculateTotal();
+    // Update the cart total in the shared service
+    this.cartService.updateCartTotal(0);
+  }
+  
   
 
 }

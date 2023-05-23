@@ -31,7 +31,7 @@
              </li>
 
              <li class="nav-item" >
-              <a routerLink="/products"><button type="button" class="btn btn-success">All Products</button></a>
+              <a routerLink="/products"><button type="button" class="btn btn-success" style="margin-left: 10px; margin-right: 10px;">All Products</button></a>
              </li>
 
             
@@ -44,9 +44,13 @@
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
-          <div *ngIf="adminCheck === 'admin'">
-            <button class="btn btn-primary view" routerLink="/crudPage" style="margin-left: 20px;">
+          <div *ngIf="adminCheck === 'admin'" style="display: flex; height: 40px;">
+            <button class="btn btn-primary view" routerLink="/crudPage" style="margin-left: 20px; width: 150px;">
               Products Data
+            </button>
+
+            <button class="btn btn-info view" routerLink="/adminPage" style="margin-left: 20px;">
+              DashBoard
             </button>
           </div>
 

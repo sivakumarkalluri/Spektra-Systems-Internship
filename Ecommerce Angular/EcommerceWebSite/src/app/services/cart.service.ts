@@ -11,6 +11,7 @@ export class CartService {
   updateCartTotal(total: number) {
     this.cartTotalSubject.next(total);
   }
+  cartSum:any;
 
   constructor() { }
 }

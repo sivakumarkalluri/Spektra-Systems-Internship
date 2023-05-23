@@ -22,5 +22,26 @@ export class HomePageComponent implements OnInit{
     this.route.navigate(['/productDetails',product])
 
   }
+  isAddedToCart: boolean = false;
+
+  initializeProductFlags() {
+    this.newArrivals.forEach((product:any) => {
+      product.isAddedToCart = false;
+    });
+  }
+  addToCart(id:number){
+    const selectedProduct = this.newArrivals.find((product: any) => product.id === id);
+    if (selectedProduct) {
+      const cartItem = {
+        id: selectedProduct.id,
+        name: selectedProduct.name,
+        price: selectedProduct.price,
+        quantity: 1,
+        discount: selectedProduct.discount,
+        description: selectedProduct.description,
+        image: selectedProduct.image
+      };
+    }
+  }
 
 }

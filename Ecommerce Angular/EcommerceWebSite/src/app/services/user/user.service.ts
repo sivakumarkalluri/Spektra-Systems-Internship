@@ -31,4 +31,7 @@ export class UserService {
   deleteData(id:number):any{
     return this.http.delete<cartI>(`${this.userApi}/${id}`);
   }
+  deleteAllData(): any {
+    return this.http.delete<any>(this.userApi);
+  }
 }
