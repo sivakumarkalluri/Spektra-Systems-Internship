@@ -10,7 +10,20 @@ import { Router } from '@angular/router';
 })
 export class AddComponent implements OnInit{
   constructor(private route:Router,private apiService:CollegeServiceService,private formBuilder:FormBuilder){}
+  studentsDetails:any;
+  lastid=1;
   ngOnInit(): void {
+
+    this.apiService.getData().subscribe((data:any)=>{
+      this.studentsDetails=data
+      this.lastid = this.studentsDetails.reduce((maxId: number, student: any) => {
+        return Math.max(maxId, student.id);
+      }, 0);
+    });
+
+    
+    
+
       
   }
   studentsForm=this.formBuilder.group({
@@ -25,6 +38,8 @@ export class AddComponent implements OnInit{
 
   saveForm():void{
     if(this.studentsForm.valid){
+     
+      this.studentsForm.value.id=(this.lastid+1).toString();
      
       this.apiService.addData(this.studentsForm.value).subscribe((response:any)=>{
         if(confirm("Student Added Successfully....")==true){

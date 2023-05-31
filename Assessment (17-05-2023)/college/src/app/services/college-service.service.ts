@@ -14,7 +14,7 @@ export class CollegeServiceService implements OnInit{
 
   loginCheck=false;
 
-  Api="http://localhost:3000/students";
+  Api="https://localhost:7155/api/API";
 
   getData():any{
     return this.http.get<student[]>(this.Api);

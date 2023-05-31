@@ -24,14 +24,18 @@ export class DisplayComponent implements OnInit{
 
   deleted=false;
   delete(id:number){
+    if(confirm("Do you want to delete this data")==true){
     this.apiService.deleteData(id).subscribe((data:any)=>{
 
+      
     }, (err: any) => console.error(err),
-    () => console.log('Error Occured'));this.apiService.getData().subscribe((data:any)=>{
-      this.studentsDetails=data}); this.deleted = true
+    () => console.log('Error Occured'));this.apiService.getData().subscribe((response:any)=>{
+      this.studentsDetails=response}); this.deleted = true
+      
       setTimeout(() => {
         this.deleted = false
       }, 2000);;
+    }
     
   
 

@@ -39,9 +39,8 @@ tbody{
     padding-bottom: 6px;
     padding-right: 10px;
     padding-left: 10px;
-    margin-left: 100px;
-    margin-top: 50px;
-    border: none;
+   margin: 40px 550px 20px ;
+     border: none;
     background-color: rgb(28, 28, 243);
     color: white;
     border-radius: 5px;
@@ -53,9 +52,9 @@ tbody{
 
 }
 .admin_body{
-    background-image: url("../../assets/bg5.jpg");
+   
     padding-top: 50px;
-    margin-top: 50px;
+   
     background-position: center;
     background-size: cover;
     height: 100%;

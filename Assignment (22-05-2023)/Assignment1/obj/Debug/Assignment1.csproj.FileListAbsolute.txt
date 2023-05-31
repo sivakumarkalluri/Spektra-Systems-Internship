@@ -8,3 +8,5 @@ C:\Spektra Systems\Spektra-Systems-Internship\Assignment (22-05-2023)\Assignment
 C:\Spektra Systems\Spektra-Systems-Internship\Assignment (22-05-2023)\Assignment1\obj\Debug\Assignment1.csproj.CopyComplete
 C:\Spektra Systems\Spektra-Systems-Internship\Assignment (22-05-2023)\Assignment1\obj\Debug\Assignment1.exe
 C:\Spektra Systems\Spektra-Systems-Internship\Assignment (22-05-2023)\Assignment1\obj\Debug\Assignment1.pdb
+C:\Spektra Systems\Spektra-Systems-Internship\Assignment (22-05-2023)\Assignment1\bin\Debug\ConsoleTables.dll
+C:\Spektra Systems\Spektra-Systems-Internship\Assignment (22-05-2023)\Assignment1\bin\Debug\ConsoleTables.pdb
