@@ -1,39 +1,37 @@
-﻿using ProductsAPI.Models;
+﻿using Azure.Core;
+using Microsoft.AspNetCore.Authentication;
+using ProductsAPI.Models;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ProductsAPI.Repositories
 {
     public class LocalImageRepository : IImageRespository
     {
-        //To get the path for Local Folder
         public readonly IWebHostEnvironment webHostEnvironment;
         public readonly IHttpContextAccessor httpContextAccessor;
         private readonly ProductDbContext productDbContext;
 
-        public LocalImageRepository(IWebHostEnvironment webHostEnvironment,IHttpContextAccessor httpContextAccessor,ProductDbContext productDbContext) {
+        public LocalImageRepository(IWebHostEnvironment webHostEnvironment, IHttpContextAccessor httpContextAccessor, ProductDbContext productDbContext)
+        {
             this.webHostEnvironment = webHostEnvironment;
             this.httpContextAccessor = httpContextAccessor;
             this.productDbContext = productDbContext;
         }
-        public async Task<Image> Upload(Image image)
+        //To get the path for Local Folder
+        public async Task<string> Upload(IFormFile file, string fileName)
         {
-            var localFilePath = Path.Combine(webHostEnvironment.ContentRootPath, "Images", $"{image.FileName}{image.FileExtension}");
+            var localFilePath = Path.Combine(webHostEnvironment.ContentRootPath, "Images", $"{fileName}");
 
-            //Reads the file stream and uploading
-            using var stream = new FileStream(localFilePath, FileMode.Create);
-            await image.File.CopyToAsync(stream);
+            //var filePath = Path.Combine(Directory.GetCurrentDirectory(), @"Images", fileName);
+            using Stream fileStream = new FileStream(localFilePath, FileMode.Create);
+            await file.CopyToAsync(fileStream);
+            var urlFilePath = $"{httpContextAccessor.HttpContext.Request.Scheme}://{httpContextAccessor.HttpContext.Request.Host}{httpContextAccessor.HttpContext.Request.PathBase}/Images/{fileName}";
+            return urlFilePath;
 
-            var urlFilePath = $"{httpContextAccessor.HttpContext.Request.Scheme}://{httpContextAccessor.HttpContext.Request.Host}{httpContextAccessor.HttpContext.Request.PathBase}/Images/{image.FileName}{image.FileExtension}";
-
-            image.FilePath = urlFilePath;
-
-            image.Id = 1;
-
-            await productDbContext.Images.AddAsync(image);
-            await productDbContext.SaveChangesAsync();
-
-            return image;
-            
-
+        }
+        private string GetServerRelativePath(string fileName)
+        {
+            return Path.Combine(@"Images", fileName);
         }
     }
 }

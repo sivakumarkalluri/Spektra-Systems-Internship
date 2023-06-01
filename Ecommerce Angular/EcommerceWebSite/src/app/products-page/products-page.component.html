@@ -20,7 +20,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-5 col-sm-6 col prod" id="arrival1" *ngFor="let product of productDetails">
                     
                     <div class="card arrival" >
-                        <img [src]="product.image" class="card-img-top displayImg" alt="..." style="height: 195px;">
+                        <img [src]="findImagePath(product.id)" class="card-img-top displayImg" alt="..." style="height: 195px;">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center">
                         <h5 class="card-title" style="margin-top: 7px;">{{product.name}}</h5>
                         <p>{{product.price}}</p>

@@ -13,5 +13,10 @@ namespace ProductsAPI.Models
         public DbSet<Purchase> Purchases { get; set; }
 
         public DbSet<Image> Images { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            
+        }
+
     }
 }

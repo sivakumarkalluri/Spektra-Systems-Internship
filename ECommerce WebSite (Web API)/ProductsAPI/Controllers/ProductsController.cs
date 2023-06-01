@@ -14,11 +14,13 @@ namespace ProductsAPI.Controllers
         // GET: api/<ProdcutsController>
         private readonly ProductDbContext _context;
         private readonly IProductRepository productRepository;
+        private readonly IImageRespository imageRespository;
 
-        public ProductsController(ProductDbContext context,IProductRepository productRepository)
+        public ProductsController(ProductDbContext context,IProductRepository productRepository,IImageRespository imageRespository)
         {
             this._context=context;
             this.productRepository = productRepository;
+            this.imageRespository = imageRespository;
         }
         [HttpGet]
         public async Task<IActionResult> GetAllProductsData(string? genderFilter, string? productCategoryFilter, string? productSubCategoryFilter, string? sortBy, bool? isAscending, int pageNumber = 1, int pageSize = 6)
@@ -48,6 +50,25 @@ namespace ProductsAPI.Controllers
 
             return CreatedAtAction(nameof(GetByID), new { id = newProduct.Id }, newProduct);
 
+        }
+
+        [HttpPost]
+        [Route("[controller]/{id}/upload-image")]
+        public async Task<IActionResult> UploadImage([FromRoute] int id,IFormFile productImage)
+        {
+            var data = await this.productRepository.GetProductByID(id);
+            if (data!=null)
+            {
+                var fileName=data.Name+data.ProductCategory+id.ToString()+Path.GetExtension(productImage.FileName);
+                var fileImagePath=await imageRespository.Upload(productImage, fileName);
+
+                if(await productRepository.UpdateImage(id, fileImagePath))
+                {
+                    return Ok(fileImagePath);
+                }
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error Uploading Image");
+            }
+            return NotFound();
         }
 
         // PUT api/<ProdcutsController>/5

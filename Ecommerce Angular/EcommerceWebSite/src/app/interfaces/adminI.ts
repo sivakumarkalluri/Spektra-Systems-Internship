@@ -4,6 +4,9 @@ export interface adminI{
     price:number,
     discount:number,
     description:number,
-    image:string
+    image:string,
+    productCategory:string,
+    productSubCategory:string,
+    gender:string
 
 }

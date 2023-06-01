@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProductsAPI.Models;
+using ProductsAPI.Models.DTO;
+
 
 namespace ProductsAPI.Repositories
 {
@@ -76,7 +78,7 @@ namespace ProductsAPI.Repositories
             data.Description = product.Description;
             data.Price = product.Price;
             data.Discount = product.Discount;
-            data.Image= product.Image;
+            data.Images= product.Images;
             data.gender = product.gender;
             data.ProductCategory = product.ProductCategory;
             data.ProductSubCategory=product.ProductSubCategory;
@@ -95,6 +97,19 @@ namespace ProductsAPI.Repositories
             await dbContext.SaveChangesAsync();
             return data;
 
+        }
+
+        public async Task<bool> UpdateImage(int id, string productImageUrl)
+        {
+            var prod=await GetProductByID(id);
+            if (prod != null)
+            {
+                prod.Images = productImageUrl;
+                await dbContext.SaveChangesAsync();
+                return true;
+
+            }
+            return false;
         }
     }
 }

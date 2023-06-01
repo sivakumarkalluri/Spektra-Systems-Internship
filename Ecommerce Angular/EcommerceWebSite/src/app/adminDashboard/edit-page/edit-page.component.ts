@@ -29,6 +29,13 @@ export class EditPageComponent implements OnInit{
     discount:this.formBuilder.control('',Validators.required),
     description:this.formBuilder.control('',Validators.required),
     image:this.formBuilder.control('',Validators.required),
+    productCategory:this.formBuilder.control('',Validators.required),
+    productSubCategory:this.formBuilder.control('',Validators.required),
+    gender:this.formBuilder.control('',Validators.required),
+
+
+    
+
   })
 
   initialiseForm():void{
@@ -40,7 +47,12 @@ export class EditPageComponent implements OnInit{
         discount:this.editingData.discount,
         description:this.editingData.description,
         image:this.editingData.image,
-        
+        productCategory:this.editingData.productCategory,
+        productSubCategory:this.editingData.productSubCategory,
+        gender:this.editingData.gender,
+
+
+
       })
     }
 

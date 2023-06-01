@@ -16,6 +16,7 @@ export class ProductsPageComponent implements OnInit{
     private loginServe:LoginService,private userApiService:UserService,private purchaseServe:PurchasedService){}
  
   productDetails:any;
+  imagesData:any;
   isAddedToCart: boolean = false;
 
   
@@ -24,7 +25,22 @@ export class ProductsPageComponent implements OnInit{
         this.productDetails=data;
         this.initializeProductFlags();
       })
+      this.AdminApiService.getImages().subscribe((imageData: any) => {
+        this.imagesData = imageData;
+      });
   }
+
+  
+  findImagePath(id:number):string{
+      var result="";
+      const matchingImage = this.imagesData.find((image: any) => image.id === id);
+      if (matchingImage) {
+        result = matchingImage.filePath;
+      }
+      return result;
+    }
+  
+
   initializeProductFlags() {
     this.productDetails.forEach((product:any) => {
       product.isAddedToCart = false;

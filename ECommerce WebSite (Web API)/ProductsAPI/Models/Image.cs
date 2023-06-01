@@ -6,7 +6,7 @@ namespace ProductsAPI.Models
     [Table("Images")]
     public class Image
     {
-        [Key]
+       
         public int Id { get; set; }
 
         //This property is not going to be mapped with database table
@@ -22,5 +22,9 @@ namespace ProductsAPI.Models
         public long FileSizeInBytes { get; set; }
 
         public string FilePath { get; set; }
+
+        
+     
+
     }
 }

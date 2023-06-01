@@ -4,6 +4,6 @@ namespace ProductsAPI.Repositories
 {
     public interface IImageRespository
     {
-        Task<Image> Upload(Image image);
+        Task<string> Upload(IFormFile file,string fileName);
     }
 }

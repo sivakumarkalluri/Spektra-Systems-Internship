@@ -1,31 +1,22 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
 
-namespace ProductsAPI.Models
+namespace ProductsAPI.Models.DTO
 {
-    [Table("products")]
-    public class Product
+    public class ProductDTO
     {
-        [Key]
-       public int Id { get; set; }
-    
+        public int Id { get; set; }
+
         public string Name { get; set; }
         public decimal Price { get; set; }
         public decimal Discount { get; set; }
         public string Description { get; set; }
-        [Column("image")]
-        public string Images { get; set; }
+        
+        public string ImagePath { get; set; }
 
         public string ProductCategory { get; set; }
 
         public string ProductSubCategory { get; set; }
 
         public string gender { get; set; }
-
-       
-
-        
-
-
     }
 }

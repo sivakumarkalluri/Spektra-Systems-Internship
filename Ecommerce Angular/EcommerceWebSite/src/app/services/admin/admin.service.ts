@@ -13,24 +13,28 @@ export class AdminService {
 
   loginCheck=false;
 
-  adminApi="http://localhost:3000/products";
+  adminApi="https://localhost:7022/api";
 
   getData():any{
-    return this.http.get<adminI[]>(this.adminApi);
+    return this.http.get<adminI[]>(this.adminApi+'/Products');
   }
   getDataByID(id:number):any{
-    return this.http.get<adminI>(`${this.adminApi}/${id}`);
+    return this.http.get<adminI>(`${this.adminApi}/Products/${id}`);
   }
   addData(data:any):any{
-    return this.http.post<adminI>(this.adminApi,data);
+    return this.http.post<adminI>(this.adminApi+'/Products',data);
+  }
+
+  getImages():any{
+    return this.http.get<any>(this.adminApi+'/Images');
   }
 
   editData(id:number,data:any):any{
-    return this.http.put<adminI>(`${this.adminApi}/${id}`,data);
+    return this.http.put<adminI>(`${this.adminApi}/Products//${id}`,data);
   }
 
   deleteData(id:number):any{
-    return this.http.delete<adminI>(`${this.adminApi}/${id}`);
+    return this.http.delete<adminI>(`${this.adminApi}/Products/${id}`);
   }
 
 

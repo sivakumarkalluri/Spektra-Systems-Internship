@@ -1,4 +1,5 @@
 ﻿using ProductsAPI.Models;
+using ProductsAPI.Models.DTO;
 
 namespace ProductsAPI.Repositories
 {
@@ -12,6 +13,8 @@ namespace ProductsAPI.Repositories
         Task<Product?> UpdateProduct(int id,Product product);
 
         Task<Product?> DeleteProduct(int id);
+
+        Task<bool> UpdateImage(int id, string profileImageUrl);
 
     }
 }
