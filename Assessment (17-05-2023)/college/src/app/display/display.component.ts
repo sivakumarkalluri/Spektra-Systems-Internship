@@ -34,7 +34,7 @@ export class DisplayComponent implements OnInit{
       
       setTimeout(() => {
         this.deleted = false
-      }, 2000);;
+      }, 2000);window.location.reload();
     }
     
   

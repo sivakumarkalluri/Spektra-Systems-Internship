@@ -1,0 +1,27 @@
+<div class="editPage">
+    <form [formGroup]="productsForm"  class="user-form">
+        <label class="form-label">ID</label>
+        <input type="number" formControlName="id" class="form-control" placeholder="Product ID">
+        <label class="form-label">Name</label>
+        <input type="text" formControlName="name" class="form-control" placeholder="Enter the Product Name">
+        <label class="form-label">Price</label>
+        <input type="number" formControlName="price" class="form-control" placeholder="Enter the Price">
+        <label class="form-label">Discount</label>
+        <input type="number" formControlName="discount" class="form-control" placeholder="Enter the Discount">
+        <label class="form-label">Description</label>
+        <input type="text" formControlName="description" class="form-control" placeholder="Enter the Description">
+        <label class="form-label">Image</label>
+        <img [src]="editingData.images" style="width: 100px; height: 100px;">
+        <input hidden type="file"  #imageUpload (change)="uploadImage($event)">
+        <button class="btn btn-primary"(click)="imageUpload.click()">Change Image</button>
+        <label class="form-label">ProductCategory</label>
+        <input type="string" formControlName="productCategory" class="form-control" placeholder="Enter the Product category">
+        <label class="form-label">ProductSubCategory</label>
+        <input type="string" formControlName="productSubCategory" class="form-control" placeholder="Enter the product Sub Category">
+        <label class="form-label">gender</label>
+        <input type="string" formControlName="gender" class="form-control" placeholder="Enter the Gender">
+        <button class="save btn btn-success" style="margin-top: 10px;" (click)="saveForm()">Save</button>
+        <button class="save btn btn-danger" style="margin-top: 10px; margin-left: 10px;" (click)="getHome()">Close</button>
+
+    </form>
+</div>

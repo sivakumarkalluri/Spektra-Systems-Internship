@@ -8420,11 +8420,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Spektra Systems\\ECommerce WebAPI\\ProductsAPI\\ProductsAPI.csproj",
+      "projectUniqueName": "C:\\Spektra Systems\\Spektra-Systems-Internship\\ECommerce WebSite (Web API)\\ProductsAPI\\ProductsAPI.csproj",
       "projectName": "ProductsAPI",
-      "projectPath": "C:\\Spektra Systems\\ECommerce WebAPI\\ProductsAPI\\ProductsAPI.csproj",
+      "projectPath": "C:\\Spektra Systems\\Spektra-Systems-Internship\\ECommerce WebSite (Web API)\\ProductsAPI\\ProductsAPI.csproj",
       "packagesPath": "C:\\Users\\sivak\\.nuget\\packages\\",
-      "outputPath": "C:\\Spektra Systems\\ECommerce WebAPI\\ProductsAPI\\obj\\",
+      "outputPath": "C:\\Spektra Systems\\Spektra-Systems-Internship\\ECommerce WebSite (Web API)\\ProductsAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

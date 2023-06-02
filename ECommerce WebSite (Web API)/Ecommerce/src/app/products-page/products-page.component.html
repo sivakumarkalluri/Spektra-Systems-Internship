@@ -1,0 +1,183 @@
+<div>
+    
+    <div class="product_hero">
+        <div class="product_head">
+            <h1 style="color: black; font-size: 70px; font-weight: bold;">End Of Season Sale</h1>
+            <h2 style="font-size: 50px; font-weight: bold; color: rgb(49, 223, 165);">On Casual Wear</h2>
+            <h3 style="font-size: 50px; font-weight: bold; color: rgb(223, 37, 37);">UP TO 50% OFF</h3>
+            <button class="btn btn-danger">Shop Now</button>
+        </div>
+        <div>
+            <img src="assets/mens_wear_bg.jpg" id="mens_bg">
+        </div>
+    </div>
+
+    <h1 style="text-align: center; margin-top: 30px; margin-bottom: 30px; font-weight: bold; color: rgb(5, 5, 110);">Our Products</h1>
+    <nav class="navbar navbar-expand-xxl bg-body-tertiary filter">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Filters</a>
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="navbar-collapse collapse"
+            id="navbarSupportedContent"
+            
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Gender
+                </a>
+                <form  [formGroup]="FilterForm" >
+                <ul class="dropdown-menu">
+                  <li><div class="form-check dropdown-item">
+                    <input class="form-check-input" type="radio" value="male" formControlName="gender">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Male
+                    </label>
+                  </div></li>
+                  <li><div class="form-check dropdown-item">
+                    <input class="form-check-input" type="radio" value="female" formControlName="gender">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Female
+                    </label>
+                  </div></li>
+                  <li><div class="form-check dropdown-item">
+                    <input class="form-check-input" type="radio" value="unisex" formControlName="gender">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Unisex
+                    </label>
+                  </div></li>
+                </ul>
+              
+              <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Top Wear
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Shirts</a></li>
+                <li><a class="dropdown-item" href="#">T-Shirts</a></li>
+             
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Bottom Wear
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Pants</a></li>
+              <li><a class="dropdown-item" href="#">Shorts</a></li>
+  
+  
+            </ul>
+            <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Shoes
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Sneakers</a></li>
+            
+  
+           
+            </ul>
+       
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Sort By
+            </a>
+            <ul class="dropdown-menu">
+                <li><div class="form-check dropdown-item">
+                    <input class="form-check-input" type="radio" value="true" formControlName="sortBy" (click)="sort()">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Price: Low to High
+                    </label>
+                  </div></li>
+                  <li><div class="form-check dropdown-item">
+                    <input class="form-check-input" type="radio" value="false" formControlName="sortBy" (click)="sort()">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Price: High to Low
+                    </label>
+                  </div></li>
+           
+            </ul>
+          </li>
+        </form>
+              <button class="btn btn-info" (click)="applyFilter()">Apply Changes</button>
+            </ul>
+
+            
+          </div>
+        </div>
+      </nav>
+
+    <div class="row products" >
+
+            <div class="row g-3" >
+               
+                <div class="col-xl-4 col-lg-4 col-md-5 col-sm-6 col prod" id="arrival1" *ngFor="let product of productDetails">
+                    
+                    <div class="card arrival" >
+                        <img src="{{product.images}}" class="card-img-top displayImg" alt="..." style="height: 195px;">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <h5 class="card-title" style="margin-top: 7px;">{{product.name}}</h5>
+                        <p>{{product.price}}</p>
+                        <button class="cart add-cart cart-1" (click)="addToCart(product.id)" [disabled]="product.isAddedToCart" style="border: none;">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span style="margin-left: 20px;" id="msg1">
+                              {{ product.isAddedToCart ? 'Added to Cart' : 'Add to Cart' }}
+                            </span>
+                          </button>
+                                                  <button class="btn btn-primary buy_now"(click)="onSelect(product.id)" >Buy Now</button>
+                        </div>
+                    </div>
+                </div> 
+            <div>
+
+                <div class="paginaion_btns">
+                    <div *ngFor="let page of pagesArray"  >
+                        <button class="btn btn-info" (click)="updatePageData(page)">{{ page }}</button>
+                    </div>
+                </div>
+</div>

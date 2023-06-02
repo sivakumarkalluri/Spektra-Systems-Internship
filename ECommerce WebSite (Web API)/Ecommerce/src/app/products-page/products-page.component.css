@@ -1,0 +1,32 @@
+.prod{
+    max-width: 300px;
+}
+.products{
+    max-width: 1000px;
+    margin: auto;
+}
+.product_hero{
+    margin-top: 20px;
+    position: relative;
+}
+.product_head{
+    top: 30%;
+    left: 20%;
+    position: absolute;
+}
+#mens_bg{
+    
+    width: 100%;
+    height: 500px;
+}
+
+.paginaion_btns{
+    display: flex;
+    width: 15px;
+    
+    gap: 5px;
+    margin: auto;
+}
+.filter{
+    width: 200px;
+}

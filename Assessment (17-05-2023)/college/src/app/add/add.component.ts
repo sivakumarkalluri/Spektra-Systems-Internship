@@ -16,9 +16,7 @@ export class AddComponent implements OnInit{
 
     this.apiService.getData().subscribe((data:any)=>{
       this.studentsDetails=data
-      this.lastid = this.studentsDetails.reduce((maxId: number, student: any) => {
-        return Math.max(maxId, student.id);
-      }, 0);
+     
     });
 
     
@@ -38,8 +36,7 @@ export class AddComponent implements OnInit{
 
   saveForm():void{
     if(this.studentsForm.valid){
-     
-      this.studentsForm.value.id=(this.lastid+1).toString();
+    
      
       this.apiService.addData(this.studentsForm.value).subscribe((response:any)=>{
         if(confirm("Student Added Successfully....")==true){

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1vEzSHmAzCjBSudxNr36M140NV81H0gUalHA/9lMWOrdey63thvw33oCQqF95cImYytJWSa3Uk+iZWCfPqhtVA==",
+  "dgSpecHash": "/pHubuGo7Kad8KVRbScvF3oApAJdZ7NvwooGowu4pdG7+jF/GZn8p6URgr4TPmAVW8jGJp0Mhv8jUSzmItHEpQ==",
   "success": true,
-  "projectFilePath": "C:\\Spektra Systems\\ECommerce WebAPI\\ProductsAPI\\ProductsAPI.csproj",
+  "projectFilePath": "C:\\Spektra Systems\\Spektra-Systems-Internship\\ECommerce WebSite (Web API)\\ProductsAPI\\ProductsAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sivak\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\sivak\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
