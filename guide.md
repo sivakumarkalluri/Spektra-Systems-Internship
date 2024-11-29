@@ -5,4 +5,4 @@ Username : <inject key="AzureAdUserEmail"></inject></br>
 Password : <inject key="AzureAdUserPassword"></inject></br>
 OCI SignIn Url : [<inject key="ocisigninurl"/>](<inject key="ocisigninurl" enableCopy="false" />)</br>
 Hello
-ocisigninurl
+ocisigninurl2
