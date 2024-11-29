@@ -3,6 +3,6 @@ Cloud Account Name :  <inject key="tenantdomainname"></inject></br>
 Domain : <inject key="aaddomain"></inject></br>
 Username : <inject key="AzureAdUserEmail"></inject></br>
 Password : <inject key="AzureAdUserPassword"></inject></br>
-OCI SignIn Url : [<inject key="ocisigninurl"/>](<inject key="ocisigninurl" enableCopy="false" />)</br>
+OCI SignIn Url : [<inject key="ocisigninurl" enableCopy="false" />](<inject key="ocisigninurl" enableCopy="false" />)</br>
 Hello
-ocisigninurl2
+ocisigninurl3
